@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Private family beta/production launch. Enable indexing only after privacy review.
