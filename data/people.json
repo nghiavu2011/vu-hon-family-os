@@ -1,0 +1,1054 @@
+[
+  {
+    "id": "vu-ba-oanh",
+    "name": "Vũ Bá Oanh",
+    "gender": "male",
+    "gen": 1,
+    "branch": "Ngành Vũ Bá Oanh",
+    "spouseIds": [
+      "vo-vu-ba-oanh"
+    ],
+    "childrenIds": [
+      "vu-van-rui",
+      "vu-van-khang",
+      "vu-hy",
+      "vu-thai",
+      "vu-van-kenh",
+      "vu-van-loan"
+    ],
+    "lunarDeath": "21-04",
+    "note": "Cụ tổ ngành Vũ Bá Oanh. Cụ và cụ bà sinh sáu con trai, ba con gái.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "PDF trang 1, 26"
+  },
+  {
+    "id": "vo-vu-ba-oanh",
+    "name": "Cụ bà, vợ cụ Vũ Bá Oanh",
+    "gender": "female",
+    "gen": 1,
+    "branch": "Ngành Vũ Bá Oanh",
+    "spouseIds": [
+      "vu-ba-oanh"
+    ],
+    "childrenIds": [
+      "vu-van-rui",
+      "vu-van-khang",
+      "vu-hy",
+      "vu-thai",
+      "vu-van-kenh",
+      "vu-van-loan"
+    ],
+    "lunarDeath": "13-12",
+    "note": "Tên cụ bà chưa đọc rõ; có ngày giỗ 13/12 âm lịch.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 26"
+  },
+  {
+    "id": "vu-van-rui",
+    "name": "Vũ Văn Rùi",
+    "gender": "male",
+    "aka": [
+      "Vũ Rùi",
+      "Cụ thôn Rùi"
+    ],
+    "gen": 2,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-ba-oanh",
+    "motherId": "vo-vu-ba-oanh",
+    "spouseIds": [
+      "vo-vu-van-rui"
+    ],
+    "childrenIds": [
+      "vu-ngoc-dien",
+      "vu-van-dac",
+      "vu-van-quyen",
+      "vu-van-rong",
+      "vu-van-cuu",
+      "vu-ky",
+      "vu-nham",
+      "vu-thi-ngoan",
+      "vu-thi-cu",
+      "vu-thi-ly"
+    ],
+    "note": "Một trong sáu con trai cụ Vũ Bá Oanh. Trang 28 ghi riêng chi nhà cụ thôn Rùi.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "PDF trang 1, 26, 28"
+  },
+  {
+    "id": "vo-vu-van-rui",
+    "name": "Cụ bà, vợ cụ Vũ Văn Rùi",
+    "gender": "female",
+    "gen": 2,
+    "branch": "Chi Vũ Văn Rùi",
+    "spouseIds": [
+      "vu-van-rui"
+    ],
+    "childrenIds": [
+      "vu-ngoc-dien",
+      "vu-van-dac",
+      "vu-van-quyen",
+      "vu-van-rong",
+      "vu-van-cuu",
+      "vu-ky",
+      "vu-nham",
+      "vu-thi-ngoan",
+      "vu-thi-cu",
+      "vu-thi-ly"
+    ],
+    "note": "Chưa có tên trong phần PDF đã đọc. Cần xác minh thêm từ bia mộ, gia đình hoặc tư liệu bổ sung.",
+    "confidence": "low",
+    "privacy": "public",
+    "source": "Dữ liệu cần bổ sung"
+  },
+  {
+    "id": "vu-van-khang",
+    "name": "Vũ Văn Kháng",
+    "gender": "male",
+    "aka": [
+      "Cụ hào Kháng"
+    ],
+    "gen": 2,
+    "branch": "Chi Vũ Văn Kháng",
+    "fatherId": "vu-ba-oanh",
+    "motherId": "vo-vu-ba-oanh",
+    "childrenIds": [],
+    "note": "Một trong sáu con trai cụ Vũ Bá Oanh; chi tiết nhánh cần nhập tiếp.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 26"
+  },
+  {
+    "id": "vu-hy",
+    "name": "Vũ Hỷ",
+    "gender": "male",
+    "gen": 2,
+    "branch": "Chi Vũ Hỷ",
+    "fatherId": "vu-ba-oanh",
+    "motherId": "vo-vu-ba-oanh",
+    "childrenIds": [],
+    "note": "Trang 26 ghi cụ Vũ Hỷ sinh cụ Vũ Văn Hân; cụ Hân sinh ông Phong, Quế.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 26"
+  },
+  {
+    "id": "vu-thai",
+    "name": "Vũ Thái",
+    "gender": "male",
+    "gen": 2,
+    "branch": "Chi Vũ Thái",
+    "fatherId": "vu-ba-oanh",
+    "motherId": "vo-vu-ba-oanh",
+    "childrenIds": [],
+    "note": "Trang 26 ghi cụ Vũ Thái sinh các cụ Vũ Văn Trực, Trường, Diễn/Điễn; cần kiểm chữ.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 26"
+  },
+  {
+    "id": "vu-van-kenh",
+    "name": "Vũ Văn Kềnh",
+    "gender": "male",
+    "gen": 2,
+    "branch": "Chi Vũ Văn Kềnh",
+    "fatherId": "vu-ba-oanh",
+    "motherId": "vo-vu-ba-oanh",
+    "childrenIds": [],
+    "note": "Trang 26 ghi cụ Vũ Văn Kềnh sinh các cụ Vũ Đệ, Nhi, Lĩnh.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 26"
+  },
+  {
+    "id": "vu-van-loan",
+    "name": "Vũ Văn Loan",
+    "gender": "male",
+    "gen": 2,
+    "branch": "Chi Vũ Văn Loan",
+    "fatherId": "vu-ba-oanh",
+    "motherId": "vo-vu-ba-oanh",
+    "childrenIds": [],
+    "note": "Trang 26 ghi cụ sinh bà Vũ Thị Bằng, không lấy chồng, mất sớm.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 26"
+  },
+  {
+    "id": "vu-ngoc-dien",
+    "name": "Vũ Ngọc Điền",
+    "gender": "male",
+    "aka": [
+      "Cụ nhang Điền"
+    ],
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "spouseIds": [
+      "nguyen-thi-he"
+    ],
+    "childrenIds": [
+      "vu-dien-mien",
+      "vu-thanh",
+      "vu-chanh",
+      "vu-tien-thanh",
+      "vu-thi-chat-lien",
+      "vu-thi-chat-con",
+      "vu-thi-ly-ngoc-dien"
+    ],
+    "birthYear": 1887,
+    "lunarDeath": "22-05",
+    "note": "Sinh 1887, thọ 73 tuổi, mất 22/5 âm lịch.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "PDF trang 28, 29"
+  },
+  {
+    "id": "nguyen-thi-he",
+    "name": "Nguyễn Thị Hè",
+    "gender": "female",
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "spouseIds": [
+      "vu-ngoc-dien"
+    ],
+    "childrenIds": [
+      "vu-dien-mien",
+      "vu-thanh",
+      "vu-chanh",
+      "vu-tien-thanh",
+      "vu-thi-chat-lien",
+      "vu-thi-chat-con",
+      "vu-thi-ly-ngoc-dien"
+    ],
+    "birthYear": 1888,
+    "deathYear": 1975,
+    "lunarDeath": "19-10",
+    "place": "Thôn Vân Hạch, xã Lê Lợi",
+    "note": "Sinh 1888, quê thôn Vân Hạch, xã Lê Lợi, thọ 88 tuổi, mất 19/10 âm lịch năm 1975.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  },
+  {
+    "id": "vu-van-dac",
+    "name": "Vũ Văn Đạc",
+    "gender": "male",
+    "aka": [
+      "Cụ nhang Đạc"
+    ],
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Con cụ Vũ Văn Rùi.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-van-quyen",
+    "name": "Vũ Văn Quyến",
+    "gender": "male",
+    "aka": [
+      "Cụ Sứ Quyến"
+    ],
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Trang 28 ghi rõ: Vũ Văn Quyến, cụ Sứ Quyến.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-van-rong",
+    "name": "Vũ Văn Rong",
+    "gender": "male",
+    "aka": [
+      "Cụ nhang Rong"
+    ],
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Con cụ Vũ Văn Rùi.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-van-cuu",
+    "name": "Vũ Văn Cừu",
+    "gender": "male",
+    "aka": [
+      "Cụ Sứ Cừu"
+    ],
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Con cụ Vũ Văn Rùi.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-ky",
+    "name": "Vũ Ký",
+    "gender": "male",
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Đoạn ghi chú cần kiểm lại chữ.",
+    "confidence": "low",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-nham",
+    "name": "Vũ Nhâm",
+    "gender": "male",
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Ghi là con của bà Hai Lại ở thôn Chương Gia; cần kiểm quan hệ.",
+    "confidence": "low",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-thi-ngoan",
+    "name": "Vũ Thị Ngoan",
+    "gender": "female",
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Lấy chồng ở huyện Tiền Hải, Thái Bình; sinh hai gái.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-thi-cu",
+    "name": "Vũ Thị Cư",
+    "gender": "female",
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Lấy chồng phố Hàng Bè, Hà Nội, không có con. Tên cần kiểm chữ.",
+    "confidence": "low",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-thi-ly",
+    "name": "Vũ Thị Lý",
+    "gender": "female",
+    "gen": 3,
+    "branch": "Chi Vũ Văn Rùi",
+    "fatherId": "vu-van-rui",
+    "motherId": "vo-vu-van-rui",
+    "childrenIds": [],
+    "note": "Lấy ông Đỗ Hợp, thôn Chương Hóa, Hồng Thái; không có con.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 28"
+  },
+  {
+    "id": "vu-dien-mien",
+    "name": "Vũ Điền",
+    "gender": "male",
+    "aka": [
+      "Miền",
+      "Vũ Điền tức Miền"
+    ],
+    "gen": 4,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-ngoc-dien",
+    "motherId": "nguyen-thi-he",
+    "spouseIds": [
+      "nguyen-thi-cuc"
+    ],
+    "childrenIds": [
+      "vu-viet-hong-duc-mung"
+    ],
+    "birthYear": 1917,
+    "deathYear": 1984,
+    "lunarDeath": "17-12",
+    "place": "Hà Nội",
+    "note": "Sinh 1917, thọ 67 tuổi, mất 17/12 âm lịch năm 1984 tại Hà Nội.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  },
+  {
+    "id": "nguyen-thi-cuc",
+    "name": "Nguyễn Thị Cúc",
+    "gender": "female",
+    "gen": 4,
+    "branch": "Chi Vũ Ngọc Điền",
+    "spouseIds": [
+      "vu-dien-mien"
+    ],
+    "childrenIds": [
+      "vu-viet-hong-duc-mung"
+    ],
+    "birthYear": 1918,
+    "lunarDeath": "24-11",
+    "place": "Làng Vũ, huyện Cẩm Giàng, Hải Dương",
+    "note": "Quê làng Vũ, huyện Cẩm Giàng, Hải Dương; sinh 1918, thọ 57 tuổi, mất 24/11 âm lịch tại Hà Nội.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  },
+  {
+    "id": "vu-viet-hong-duc-mung",
+    "name": "Vũ Việt Hồng",
+    "gender": "male",
+    "aka": [
+      "Vũ Đức Mừng"
+    ],
+    "gen": 5,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-dien-mien",
+    "motherId": "nguyen-thi-cuc",
+    "spouseIds": [
+      "phung-thi-thanh-ha"
+    ],
+    "childrenIds": [
+      "vu-quang",
+      "vu-thi-hong-hanh"
+    ],
+    "birthDate": "1945-10-01",
+    "place": "Hà Nội",
+    "note": "Sinh 01/10/1945 tại Hà Nội.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "PDF trang 30"
+  },
+  {
+    "id": "phung-thi-thanh-ha",
+    "name": "Phùng Thị Thanh Hà",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Ngọc Điền",
+    "spouseIds": [
+      "vu-viet-hong-duc-mung"
+    ],
+    "childrenIds": [
+      "vu-quang",
+      "vu-thi-hong-hanh"
+    ],
+    "birthDate": "1959-10-01",
+    "place": "Hà Nội",
+    "note": "Quê Hà Nội, sinh 01/10/1959.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "PDF trang 30"
+  },
+  {
+    "id": "vu-quang",
+    "name": "Vũ Quang",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-viet-hong-duc-mung",
+    "motherId": "phung-thi-thanh-ha",
+    "childrenIds": [],
+    "birthDate": "1977-10-06",
+    "note": "Sinh 06/10/1977.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "PDF trang 30"
+  },
+  {
+    "id": "vu-thi-hong-hanh",
+    "name": "Vũ Thị Hồng Hạnh",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-viet-hong-duc-mung",
+    "motherId": "phung-thi-thanh-ha",
+    "childrenIds": [],
+    "birthDate": "1979-11-13",
+    "note": "Sinh 13/11/1979.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "PDF trang 30"
+  },
+  {
+    "id": "vu-thanh",
+    "name": "Vũ Thành",
+    "gender": "male",
+    "gen": 4,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-ngoc-dien",
+    "motherId": "nguyen-thi-he",
+    "spouseIds": [
+      "dang-thi-thai"
+    ],
+    "childrenIds": [
+      "vu-thi-hang",
+      "vu-chi-thien",
+      "vu-huu-dung",
+      "vu-chinh-tuong",
+      "vu-duc-tung",
+      "vu-thi-van-yen",
+      "vu-thi-thu-ha"
+    ],
+    "birthDate": "1923-01-05",
+    "deathDate": "2008-07-04",
+    "deathTime": "13:15",
+    "deathPlace": "Tại gia (tại nhà)",
+    "lunarDeath": "02-06",
+    "lunarDeathYear": "Mậu Tý",
+    "graveId": "grave-vu-thanh",
+    "gravePhotos": [
+      "/assets/graves/mo-vu-thanh-01.jpg",
+      "/assets/graves/mo-vu-thanh-02.jpg",
+      "/assets/graves/mo-vu-thanh-03.jpg"
+    ],
+    "note": "Cụ Vũ Thành từ trần hồi 13h15 phút ngày 04/07/2008 (tức ngày 02/06 năm Mậu Tý) tại nhà, hưởng thọ 86 tuổi. Khu lăng mộ song táng cùng cụ bà Đặng Thị Thái.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "dang-thi-thai",
+    "name": "Đặng Thị Thái",
+    "gender": "female",
+    "gen": 4,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-thanh"
+    ],
+    "childrenIds": [
+      "vu-thi-hang",
+      "vu-chi-thien",
+      "vu-huu-dung",
+      "vu-chinh-tuong",
+      "vu-duc-tung",
+      "vu-thi-van-yen",
+      "vu-thi-thu-ha"
+    ],
+    "birthDate": "1928-10-15",
+    "deathDate": "1996-06-18",
+    "lunarDeath": "03-05",
+    "lunarDeathYear": "Bính Tý",
+    "graveId": "grave-vu-thanh",
+    "note": "Cụ bà Đặng Thị Thái mất vào ngày 18/06/1996 (tức ngày 03/05 năm Bính Tý), hưởng thọ 69 tuổi. Khu lăng mộ song táng cùng cụ Vũ Thành.",
+    "confidence": "high",
+    "privacy": "public",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "vu-thi-hang",
+    "name": "Vũ Thị Hằng",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-thanh",
+    "motherId": "dang-thi-thai",
+    "childrenIds": [
+      "ngo-trong-long"
+    ],
+    "birthDate": "1949-02-12",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "ngo-trong-long",
+    "name": "Ngọ Trọng Long",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "motherId": "vu-thi-hang",
+    "childrenIds": [],
+    "birthDate": "1976-04-25",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-chi-thien",
+    "name": "Vũ Chí Thiện",
+    "gender": "male",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-thanh",
+    "motherId": "dang-thi-thai",
+    "childrenIds": [],
+    "birthDate": "1953-06-23",
+    "deathDate": "1985-06-06",
+    "graveId": "grave-vu-chi-thien",
+    "gravePhotos": [
+      "/assets/graves/mo-vu-chi-thien.jpg"
+    ],
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-huu-dung",
+    "name": "Vũ Hữu Dũng",
+    "gender": "male",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-thanh",
+    "motherId": "dang-thi-thai",
+    "spouseIds": [
+      "pham-bich-thuy"
+    ],
+    "childrenIds": [
+      "vu-trong-nghia",
+      "vu-phuong-thao"
+    ],
+    "birthDate": "1955-11-13",
+    "deathDate": "2026-07-18",
+    "lunarDeath": "05-06",
+    "note": "Hưởng thọ 72 tuổi. Tạ thế ngày 18/07/2026 (tức ngày 5 tháng 6 năm Bính Ngọ).",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "pham-bich-thuy",
+    "name": "Phạm Bích Thủy",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-huu-dung"
+    ],
+    "childrenIds": [
+      "vu-trong-nghia",
+      "vu-phuong-thao"
+    ],
+    "birthDate": "1959-09-15",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-trong-nghia",
+    "name": "Vũ Trọng Nghĩa",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-huu-dung",
+    "motherId": "pham-bich-thuy",
+    "spouseIds": [
+      "nguyen-sao-mai"
+    ],
+    "childrenIds": [
+      "vu-bao-nguyen",
+      "vu-nhat-minh"
+    ],
+    "birthDate": "1985-11-20",
+    "note": "Thế hệ thứ 6 Chi Vũ Thành.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "nguyen-sao-mai",
+    "name": "Nguyễn Sao Mai",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-trong-nghia"
+    ],
+    "childrenIds": [
+      "vu-bao-nguyen",
+      "vu-nhat-minh"
+    ],
+    "birthDate": "1984-06-26",
+    "note": "Con dâu họ Vũ, vợ ông Vũ Trọng Nghĩa.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "vu-bao-nguyen",
+    "name": "Vũ Bảo Nguyên",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-trong-nghia",
+    "motherId": "nguyen-sao-mai",
+    "childrenIds": [],
+    "birthDate": "2010-11-16",
+    "note": "Con trai cả (Trưởng nam) của ông Vũ Trọng Nghĩa và bà Nguyễn Sao Mai.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "vu-nhat-minh",
+    "name": "Vũ Nhật Minh",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-trong-nghia",
+    "motherId": "nguyen-sao-mai",
+    "childrenIds": [],
+    "birthDate": "2015-10-01",
+    "note": "Con trai thứ (Em trai) của ông Vũ Trọng Nghĩa và bà Nguyễn Sao Mai.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "vu-phuong-thao",
+    "name": "Vũ Phương Thảo",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-huu-dung",
+    "motherId": "pham-bich-thuy",
+    "spouseIds": [
+      "nguyen-trong-quang"
+    ],
+    "childrenIds": [
+      "nguyen-thuy-duong",
+      "nguyen-trong-phuc-khanh"
+    ],
+    "birthDate": "1991-03-01",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "nguyen-trong-quang",
+    "name": "Nguyễn Trọng Quang",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-phuong-thao"
+    ],
+    "childrenIds": [
+      "nguyen-thuy-duong",
+      "nguyen-trong-phuc-khanh"
+    ],
+    "birthDate": "1988-09-17",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "nguyen-thuy-duong",
+    "name": "Nguyễn Thùy Dương",
+    "gender": "female",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "nguyen-trong-quang",
+    "motherId": "vu-phuong-thao",
+    "childrenIds": [],
+    "birthDate": "2016-12-07",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "nguyen-trong-phuc-khanh",
+    "name": "Nguyễn Trọng Phúc Khánh",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "nguyen-trong-quang",
+    "motherId": "vu-phuong-thao",
+    "childrenIds": [],
+    "birthDate": "2020-09-04",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-chinh-tuong",
+    "name": "Vũ Chính Tường",
+    "gender": "male",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-thanh",
+    "motherId": "dang-thi-thai",
+    "spouseIds": [
+      "tran-thi-bich-hao",
+      "tran-thuy-hanh"
+    ],
+    "childrenIds": [
+      "vu-tien-duc",
+      "vu-duc-trung"
+    ],
+    "birthDate": "1957-12-27",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "tran-thi-bich-hao",
+    "name": "Trần Thị Bích Hảo",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-chinh-tuong"
+    ],
+    "childrenIds": [
+      "vu-tien-duc"
+    ],
+    "birthYear": 1959,
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "tran-thuy-hanh",
+    "name": "Trần Thúy Hạnh",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-chinh-tuong"
+    ],
+    "childrenIds": [
+      "vu-duc-trung"
+    ],
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-tien-duc",
+    "name": "Vũ Tiến Đức",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-chinh-tuong",
+    "motherId": "tran-thi-bich-hao",
+    "childrenIds": [],
+    "birthDate": "1982-01-04",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-duc-trung",
+    "name": "Vũ Đức Trung",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-chinh-tuong",
+    "motherId": "tran-thuy-hanh",
+    "childrenIds": [],
+    "birthYear": 1991,
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-duc-tung",
+    "name": "Vũ Đức Tùng",
+    "gender": "male",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-thanh",
+    "motherId": "dang-thi-thai",
+    "spouseIds": [
+      "tong-thanh-hien"
+    ],
+    "childrenIds": [
+      "vu-thi-thu-trang"
+    ],
+    "birthDate": "1959-11-08",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "tong-thanh-hien",
+    "name": "Tống Thanh Hiền",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-duc-tung"
+    ],
+    "childrenIds": [
+      "vu-thi-thu-trang"
+    ],
+    "birthYear": 1960,
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-thi-thu-trang",
+    "name": "Vũ Thị Thu Trang",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-duc-tung",
+    "motherId": "tong-thanh-hien",
+    "childrenIds": [],
+    "birthDate": "1988-08-02",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-thi-van-yen",
+    "name": "Vũ Thị Vân Yến",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-thanh",
+    "motherId": "dang-thi-thai",
+    "childrenIds": [],
+    "birthDate": "1961-10-07",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-thi-thu-ha",
+    "name": "Vũ Thị Thu Hà",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-thanh",
+    "motherId": "dang-thi-thai",
+    "spouseIds": [
+      "nguyen-van-tien"
+    ],
+    "childrenIds": [
+      "nguyen-thi-kim-dung"
+    ],
+    "birthDate": "1963-08-09",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "nguyen-van-tien",
+    "name": "Nguyễn Văn Tiến",
+    "gender": "male",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-thi-thu-ha"
+    ],
+    "childrenIds": [
+      "nguyen-thi-kim-dung"
+    ],
+    "birthYear": 1960,
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "nguyen-thi-kim-dung",
+    "name": "Nguyễn Thị Kim Dung",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "nguyen-van-tien",
+    "motherId": "vu-thi-thu-ha",
+    "childrenIds": [],
+    "birthDate": "1988-05-13",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-chanh",
+    "name": "Vũ Chánh",
+    "gender": "male",
+    "gen": 4,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-ngoc-dien",
+    "motherId": "nguyen-thi-he",
+    "childrenIds": [],
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  },
+  {
+    "id": "vu-tien-thanh",
+    "name": "Vũ Tiến",
+    "gender": "male",
+    "aka": [
+      "Thanh",
+      "Vũ Tiến tức Thanh"
+    ],
+    "gen": 4,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-ngoc-dien",
+    "motherId": "nguyen-thi-he",
+    "childrenIds": [],
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  },
+  {
+    "id": "vu-thi-chat-lien",
+    "name": "Vũ Thị Chất Liên",
+    "gender": "female",
+    "gen": 4,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-ngoc-dien",
+    "motherId": "nguyen-thi-he",
+    "childrenIds": [],
+    "note": "Lấy ông Giang, thôn Chương Hóa.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  },
+  {
+    "id": "vu-thi-chat-con",
+    "name": "Vũ Thị Chất Con",
+    "gender": "female",
+    "gen": 4,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-ngoc-dien",
+    "motherId": "nguyen-thi-he",
+    "childrenIds": [],
+    "note": "Lấy ông Gạc, thôn Chương Gia.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  },
+  {
+    "id": "vu-thi-ly-ngoc-dien",
+    "name": "Vũ Thị Ly",
+    "gender": "female",
+    "gen": 4,
+    "branch": "Chi Vũ Ngọc Điền",
+    "fatherId": "vu-ngoc-dien",
+    "motherId": "nguyen-thi-he",
+    "childrenIds": [],
+    "note": "Lấy ông Chức, địa danh cần kiểm lại.",
+    "confidence": "medium",
+    "privacy": "public",
+    "source": "PDF trang 29"
+  }
+]

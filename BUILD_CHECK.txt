@@ -1,0 +1,15 @@
+V24 generated.
+
+Recommended local check:
+npm install
+npm run build
+npm run preview
+
+Manual test:
+1. Open Launch section.
+2. Toggle launch checklist.
+3. Export backup bundle.
+4. Export production data pack.
+5. Confirm Error Boundary wraps App.
+6. Confirm robots.txt and manifest.webmanifest exist.
+7. Confirm public role does not expose sensitive data.

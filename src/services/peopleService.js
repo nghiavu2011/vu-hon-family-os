@@ -1,0 +1,4 @@
+import { getSupabaseClient } from './supabaseClient.js';
+export async function createPerson(payload){ const c=getSupabaseClient(); if(!c) throw new Error('Can Supabase mode.'); const {data,error}=await c.from('people').insert(payload).select().single(); if(error) throw error; return data; }
+export async function updatePerson(id,payload){ const c=getSupabaseClient(); if(!c) throw new Error('Can Supabase mode.'); const {data,error}=await c.from('people').update(payload).eq('id',id).select().single(); if(error) throw error; return data; }
+export async function submitPersonCorrection(payload){ const c=getSupabaseClient(); if(!c) throw new Error('Can Supabase mode.'); const {data,error}=await c.from('family_requests').insert({request_type:'data_correction',message:JSON.stringify(payload),status:'pending'}).select().single(); if(error) throw error; return data; }

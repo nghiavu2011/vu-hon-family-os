@@ -1,0 +1,22 @@
+{
+  "name": "Vũ Hồn Family OS",
+  "short_name": "Vũ Hồn OS",
+  "description": "Gia phả họ Vũ Hồn - tìm về cội nguồn, kết nối hiện tại, trao truyền tương lai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7e6",
+  "theme_color": "#8f1f16",
+  "lang": "vi-VN",
+  "icons": [
+    {
+      "src": "/assets/seal-vu.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/seal-vu.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
