@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { formatLunar } from '../lib/utils.js';
+import DeathAnniversaryReminderModal from './DeathAnniversaryReminderModal.jsx';
 
 export default function EventList({ events }) {
   const [showPrayer, setShowPrayer] = useState(false);
+  const [showReminderModal, setShowReminderModal] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const sorted = [...events].sort((a, b) => {
@@ -45,13 +47,23 @@ Nam mô A Di Đà Phật! (3 lần, 3 lạy)`;
             <h2>Lịch Giỗ Tổ & Kỵ Nhật Dòng Họ</h2>
             <p className="sub">Các ngày kỵ nhật âm lịch được đối chiếu từ phả ký Mộ Trạch và gia phả các chi ngành.</p>
           </div>
-          <button
-            type="button"
-            className="btn primary"
-            onClick={() => setShowPrayer(!showPrayer)}
-          >
-            {showPrayer ? 'Ẩn bài Văn khấn' : '📜 Xem Văn khấn cúng Giỗ'}
-          </button>
+          <div className="eventHeadActions">
+            <button
+              type="button"
+              className="btn primary reminderPulseBtn"
+              onClick={() => setShowReminderModal(true)}
+              title="Cài đặt nhắc nhở trước 1 ngày qua số điện thoại, Zalo hoặc ứng dụng Lịch"
+            >
+              🔔 Nhắc Giỗ Tự Động (Trước 1 Ngày)
+            </button>
+            <button
+              type="button"
+              className="btn"
+              onClick={() => setShowPrayer(!showPrayer)}
+            >
+              {showPrayer ? 'Ẩn bài Văn khấn' : '📜 Văn khấn cúng Giỗ'}
+            </button>
+          </div>
         </div>
 
         {showPrayer && (
@@ -102,6 +114,13 @@ Nam mô A Di Đà Phật! (3 lần, 3 lạy)`;
           </div>
         </div>
       </div>
+
+      {showReminderModal && (
+        <DeathAnniversaryReminderModal
+          events={events}
+          onClose={() => setShowReminderModal(false)}
+        />
+      )}
     </section>
   );
 }

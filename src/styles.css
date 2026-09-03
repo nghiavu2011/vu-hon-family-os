@@ -3989,6 +3989,250 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
   margin-bottom:6px;
 }
 
+/* ==========================================================================
+   Tính Năng Nhắc Giỗ Tự Động (Trước 1 Ngày) - Zalo / SMS / Lịch Điện Thoại
+   ========================================================================== */
+.eventHeadActions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.reminderPulseBtn{
+  background:linear-gradient(180deg,#c79a42,#a37622) !important;
+  color:#2a1107 !important;
+  font-weight:900 !important;
+  border-color:#ffd57e !important;
+  box-shadow:0 4px 14px rgba(199,154,66,.4) !important;
+  animation:btnGlow 2.5s infinite;
+}
+@keyframes btnGlow{
+  0%,100%{box-shadow:0 4px 14px rgba(199,154,66,.4);}
+  50%{box-shadow:0 4px 22px rgba(255,213,126,.8);}
+}
+.reminderModalCard{
+  max-width:680px;
+  width:95%;
+  background:linear-gradient(180deg,#fffdf7,#fbf4e5);
+  border:2px solid var(--gold);
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+.reminderTabsNav{
+  display:flex;
+  gap:8px;
+  border-bottom:1.5px solid rgba(199,154,66,.35);
+  padding-bottom:10px;
+  margin-bottom:18px;
+  overflow-x:auto;
+}
+.rTabBtn{
+  background:none;
+  border:1px solid transparent;
+  color:var(--muted);
+  font-weight:700;
+  font-size:13px;
+  padding:8px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:all .15s ease;
+}
+.rTabBtn:hover{
+  background:rgba(199,154,66,.12);
+  color:var(--son);
+}
+.rTabBtn.active{
+  background:rgba(143,31,22,.1);
+  border-color:rgba(143,31,22,.3);
+  color:var(--son);
+}
+.reminderForm{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  background:#fff;
+  border:1px solid rgba(199,154,66,.3);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:18px;
+}
+.formRow{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+@media(max-width:600px){
+  .formRow{grid-template-columns:1fr;}
+}
+.formRow label{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  font-size:12.5px;
+  color:var(--wood);
+  font-weight:700;
+}
+.formRow input,
+.formRow select{
+  padding:9px 12px;
+  border:1px solid rgba(199,154,66,.4);
+  border-radius:10px;
+  font-size:13px;
+}
+.noticeMsg{
+  background:#dcfce7;
+  border:1px solid #86efac;
+  color:#15803d;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:12.5px;
+  font-weight:700;
+}
+.savedPhoneSection h4{
+  font-size:13.5px;
+  color:var(--son);
+  margin:0 0 10px;
+}
+.savedPhoneList{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.savedPhoneItem{
+  background:#fff;
+  border:1px solid rgba(199,154,66,.3);
+  border-radius:12px;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.spInfo{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  font-size:12.5px;
+}
+.spInfo b{
+  color:var(--son);
+  font-size:14px;
+}
+.spInfo span{
+  color:var(--muted);
+}
+.spActions{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.zaloConnectBtn{
+  background:#0068ff !important;
+  color:#fff !important;
+  border-color:#0050c8 !important;
+  font-size:11.5px !important;
+}
+.deleteBtn{
+  background:rgba(239,68,68,.1) !important;
+  color:#dc2626 !important;
+  border-color:rgba(239,68,68,.25) !important;
+  padding:6px 10px !important;
+}
+.calendarSyncCard{
+  background:#fff;
+  border:1.5px solid rgba(199,154,66,.35);
+  border-radius:16px;
+  padding:18px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+.csIcon{
+  font-size:36px;
+  line-height:1;
+}
+.calendarSyncCard h4{
+  margin:0 0 6px;
+  color:var(--son);
+  font-size:16px;
+}
+.calendarSyncCard p{
+  margin:0;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--ink);
+}
+.calendarBigBtn{
+  width:100%;
+  font-size:15px !important;
+  padding:14px !important;
+  margin-bottom:14px;
+  font-weight:900 !important;
+}
+.calendarGuide{
+  background:rgba(255,247,230,.75);
+  border:1px dashed rgba(199,154,66,.4);
+  border-radius:14px;
+  padding:14px 18px;
+  font-size:12.5px;
+  color:var(--ink);
+}
+.calendarGuide ol{
+  margin:8px 0 0 18px;
+  padding:0;
+  line-height:1.7;
+}
+.gatewayGuideBox{
+  background:#fff;
+  border:1px solid rgba(199,154,66,.35);
+  border-radius:16px;
+  padding:18px;
+}
+.gatewayGuideBox h4{
+  margin:0 0 8px;
+  color:var(--son);
+}
+.gatewayGuideBox p{
+  font-size:13px;
+  color:var(--ink);
+  line-height:1.6;
+  margin:0 0 14px;
+}
+.gatewaySteps{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:14px;
+}
+.gwStep{
+  background:rgba(255,247,230,.6);
+  border-left:3px solid var(--son);
+  border-radius:0 10px 10px 0;
+  padding:8px 12px;
+  font-size:12.5px;
+}
+.gwStep b{
+  display:block;
+  color:var(--wood);
+  margin-bottom:2px;
+}
+.gwStep span{
+  color:var(--ink);
+}
+.gatewayContactNote{
+  background:#fef3c7;
+  border:1px solid #fde68a;
+  color:#92400e;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:12.5px;
+  line-height:1.5;
+}
+
+
 
 
 
