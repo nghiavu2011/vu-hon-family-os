@@ -12,8 +12,8 @@ const AuthContext = createContext(null);
 
 const DEMO_PROFILE = {
   id: 'static-demo-user',
-  display_name: 'Static Demo',
-  role: 'public',
+  display_name: 'Con cháu Nội tộc (Toàn họ)',
+  role: 'family_member',
   branch: '',
   person_id: null,
 };

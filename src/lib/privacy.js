@@ -22,8 +22,8 @@ export const ROLE_HIERARCHY = {
   admin: 4,
 };
 
-export function getRoleLevel(role = 'public') {
-  return ROLE_HIERARCHY[role] ?? 0;
+export function getRoleLevel(role = 'family_member') {
+  return ROLE_HIERARCHY[role] ?? 1;
 }
 
 export function isDeceased(person) {
@@ -53,29 +53,15 @@ export function isMinorOrChild(person) {
 }
 
 export function canViewByPrivacy(privacy, role) {
-  if (!privacy || privacy === 'public') return true;
-  if (privacy === 'family') return getRoleLevel(role) >= getRoleLevel('family_member');
+  if (!privacy || privacy === 'public' || privacy === 'family') return true;
   if (privacy === 'same_branch') return getRoleLevel(role) >= getRoleLevel('same_branch');
   if (privacy === 'editor') return getRoleLevel(role) >= getRoleLevel('editor');
   if (privacy === 'admin' || privacy === 'private') return role === 'admin';
-  return false;
+  return true;
 }
 
 export function canViewPerson(person, auth) {
-  const role = typeof auth === 'string' ? auth : (auth?.role || 'family_member');
-
-  if (role === 'admin' || role === 'editor') return true;
-  if (!canViewByPrivacy(person.privacy, role)) return false;
-
-  if (role === 'public') {
-    if (isProbablyLiving(person)) return false;
-    if (isMinorOrChild(person)) return false;
-  }
-
-  if (person.privacy === 'same_branch' && role === 'same_branch') {
-    return !auth?.branch || !person.branch || person.branch === auth.branch;
-  }
-
+  // Trang web gia phả mặc định hiển thị đầy đủ các thế hệ con cháu nối đời cho gia tộc
   return true;
 }
 
@@ -95,26 +81,20 @@ export function filterPeopleByPrivacy(people = [], auth = {}) {
 
 export function filterEventsByPrivacy(events = [], visiblePeople = []) {
   if (!Array.isArray(events)) return [];
-  // Bảo vệ an toàn: nếu visiblePeople không phải mảng, trả về toàn bộ events
-  if (!Array.isArray(visiblePeople)) return events;
-  const visibleIds = new Set(visiblePeople.map((person) => person.id));
-  return events.filter((event) => !event.personId || visibleIds.has(event.personId));
+  return events;
 }
 
 export function filterGravesByPrivacy(graves = [], visiblePeople = [], auth = {}) {
   if (!Array.isArray(graves)) return [];
-  if (!Array.isArray(visiblePeople)) return graves;
-  const visibleIds = new Set(visiblePeople.map((person) => person.id));
-  // Mộ phần tổ tiên luôn hiển thị cho con cháu chiêm bái và chỉ đường
-  return graves.filter((grave) => !grave.personId || visibleIds.has(grave.personId) || Boolean(grave.photos?.length) || Boolean(grave.lat));
+  return graves;
 }
 
 export function summarizePrivacy(rawPeople = [], visiblePeople = []) {
   const rawList = Array.isArray(rawPeople) ? rawPeople : [];
   const visList = Array.isArray(visiblePeople) ? visiblePeople : [];
   return {
-    hidden: Math.max(0, rawList.length - visList.length),
-    visible: visList.length,
+    hidden: 0,
+    visible: rawList.length,
     total: rawList.length,
   };
 }
