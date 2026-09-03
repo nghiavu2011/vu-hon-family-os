@@ -532,23 +532,31 @@ button:disabled{
 }
 
 
-/* V21 Grave Map + QR */
+/* V21 Grave Map + QR (Cân bằng đối xứng 1:1 chiều rộng và chiều cao) */
 .graveMapShell{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:18px;
-  align-items:start;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:stretch;
 }
 .graveMapPanel{
-  display:grid;
-  grid-template-columns:1fr 280px;
+  display:flex;
+  flex-direction:column;
   gap:14px;
+  height:100%;
+  min-height:620px;
+  padding:20px;
+  border-radius:28px;
+  border:1px solid rgba(199,154,66,.55);
+  background:rgba(255,247,230,.95);
+  box-shadow:var(--shadow);
 }
 .heritageMap{
-  min-height:560px;
+  flex:1;
+  min-height:360px;
   border:1px solid rgba(199,154,66,.58);
-  border-radius:28px;
-  box-shadow:var(--shadow);
+  border-radius:20px;
+  box-shadow:inset 0 2px 8px rgba(0,0,0,.12);
   overflow:hidden;
   position:relative;
   background:rgba(255,247,230,.9);
@@ -654,6 +662,12 @@ button:disabled{
   margin-top:4px;
 }
 .graveDetail{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  min-height:620px;
+  max-height:740px;
+  overflow-y:auto;
   padding:20px;
   border-radius:28px;
   border:1px solid rgba(199,154,66,.55);
@@ -870,13 +884,13 @@ button:disabled{
   height:18px;
 }
 
-@media(max-width:1200px){
-  .graveMapShell,
-  .graveMapPanel{
+@media(max-width:960px){
+  .graveMapShell{
     grid-template-columns:1fr;
   }
-  .graveList{
-    max-height:none;
+  .graveDetail,
+  .graveMapPanel{
+    min-height:auto;
   }
 }
 @media(max-width:680px){
@@ -3472,6 +3486,261 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
   color:var(--muted);
   line-height:1.45;
 }
+
+/* ==========================================================================
+   Realtime Floating Widget (Bé xinh ở góc phải màn hình)
+   ========================================================================== */
+.realtimeFloatingWidget{
+  position:fixed;
+  bottom:86px;
+  right:18px;
+  z-index:999;
+  font-family:inherit;
+}
+.realtimePillBtn{
+  background:linear-gradient(180deg,#2b1108,#140702);
+  border:1.5px solid var(--gold);
+  color:#fff2c9;
+  padding:7px 14px;
+  border-radius:999px;
+  box-shadow:0 8px 24px rgba(0,0,0,.38);
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-size:12px;
+  cursor:pointer;
+  transition:all .2s cubic-bezier(.2,.8,.2,1);
+}
+.realtimePillBtn:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 12px 28px rgba(0,0,0,.45);
+  border-color:#ffd57e;
+  color:#fff;
+}
+.livePulseDot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#22c55e;
+  box-shadow:0 0 8px #22c55e;
+  display:inline-block;
+  animation:liveDotPulse 1.8s infinite;
+}
+@keyframes liveDotPulse{
+  0%,100%{transform:scale(1); opacity:1;}
+  50%{transform:scale(1.4); opacity:.7;}
+}
+.pillText b{
+  color:#ffd57e;
+}
+.pillExpandIcon{
+  font-size:11px;
+  opacity:.85;
+}
+
+/* Thẻ thống kê chi tiết khi mở ra */
+.realtimeCard{
+  width:315px;
+  background:linear-gradient(180deg,#fffdf7,#fbf4e5);
+  border:2px solid var(--gold);
+  border-radius:20px;
+  box-shadow:0 16px 44px rgba(0,0,0,.35);
+  overflow:hidden;
+  animation:cardPopIn .2s ease-out;
+}
+@keyframes cardPopIn{
+  from{opacity:0; transform:translateY(12px) scale(.95);}
+  to{opacity:1; transform:translateY(0) scale(1);}
+}
+.realtimeCardHead{
+  background:linear-gradient(180deg,#8f1f16,#6f140d);
+  color:#fff2c9;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.headTitle{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:12.5px;
+}
+.headTitle b{
+  color:#ffd57e;
+}
+.realtimeCloseBtn{
+  background:rgba(255,255,255,.15);
+  border:none;
+  color:#fff;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  font-size:12px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all .15s ease;
+}
+.realtimeCloseBtn:hover{
+  background:rgba(255,255,255,.3);
+  transform:scale(1.1);
+}
+.realtimeCardBody{
+  padding:14px;
+}
+.realtimeMiniGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-bottom:12px;
+}
+.rmItem{
+  background:#fff;
+  border:1px solid rgba(199,154,66,.35);
+  border-radius:12px;
+  padding:8px 10px;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.rmItem.highlight{
+  background:rgba(143,31,22,.06);
+  border-color:rgba(143,31,22,.3);
+}
+.rmItem span{
+  font-size:11px;
+  color:var(--muted);
+}
+.rmItem b{
+  font-size:15px;
+  color:var(--son);
+}
+.realtimeLocations{
+  background:#fff;
+  border:1px solid rgba(199,154,66,.25);
+  border-radius:12px;
+  padding:9px 12px;
+  margin-bottom:10px;
+}
+.rlTitle{
+  font-size:11.5px;
+  font-weight:700;
+  color:var(--wood);
+  margin-bottom:6px;
+}
+.rlItem{
+  display:flex;
+  justify-content:space-between;
+  font-size:11.5px;
+  color:var(--ink);
+  padding:3px 0;
+  border-bottom:1px dashed rgba(199,154,66,.18);
+}
+.rlItem:last-child{
+  border-bottom:none;
+}
+.realtimeConfigForm{
+  display:flex;
+  gap:6px;
+  margin-bottom:10px;
+}
+.configInput{
+  flex:1;
+  font-size:11.5px;
+  padding:5px 8px;
+  border:1px solid rgba(199,154,66,.4);
+  border-radius:8px;
+}
+.configMsg{
+  font-size:11px;
+  color:var(--son);
+  margin-top:4px;
+}
+.realtimeCardFooter{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:6px;
+  border-top:1px solid rgba(199,154,66,.2);
+}
+.footerLinkBtn{
+  background:none;
+  border:none;
+  color:var(--son);
+  font-size:11px;
+  font-weight:700;
+  cursor:pointer;
+  padding:2px 4px;
+  border-radius:4px;
+}
+.footerLinkBtn:hover{
+  background:rgba(143,31,22,.08);
+  text-decoration:underline;
+}
+.sourceNote{
+  font-size:10.5px;
+  color:var(--muted);
+  font-style:italic;
+}
+
+/* ==========================================================================
+   Member Directory Tinh Gọn (Chỉ hiện gợi ý hoặc khi tìm kiếm)
+   ========================================================================== */
+.directoryToolbar{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.directorySearchInput{
+  flex:1;
+  min-width:260px;
+}
+.directorySelect{
+  max-width:200px;
+}
+.directoryHeadActions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.toggleShowAllBtn{
+  background:rgba(143,31,22,.08);
+  color:var(--son);
+  border-color:rgba(143,31,22,.3);
+}
+.directoryHintBox{
+  background:rgba(255,247,230,.75);
+  border:1.5px dashed rgba(199,154,66,.45);
+  border-radius:20px;
+  padding:24px 20px;
+  text-align:center;
+  margin-top:14px;
+}
+.directoryHintBox p{
+  margin:0 0 12px;
+  color:var(--ink);
+  font-size:14px;
+}
+.directoryHintButtons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.directoryEmptySearch{
+  grid-column:1/-1;
+  background:#fff;
+  border:1px solid rgba(199,154,66,.3);
+  border-radius:14px;
+  padding:20px;
+  text-align:center;
+  color:var(--muted);
+  font-style:italic;
+}
+
 
 
 
