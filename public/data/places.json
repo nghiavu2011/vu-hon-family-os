@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Khu mộ tổ",
+    "type": "Mộ phần",
+    "address": "Chưa có tọa độ",
+    "note": "MVP sẽ bổ sung ảnh bia, tọa độ GPS, người phụ trách, QR hồ sơ cụ."
+  },
+  {
+    "name": "Thôn Vân Hạch, xã Lê Lợi",
+    "type": "Quê cụ bà Nguyễn Thị Hè",
+    "address": "Thôn Vân Hạch, xã Lê Lợi",
+    "note": "Theo trang 29."
+  },
+  {
+    "name": "Làng Vũ, huyện Cẩm Giàng, Hải Dương",
+    "type": "Quê bà Nguyễn Thị Cúc",
+    "address": "Cẩm Giàng, Hải Dương",
+    "note": "Theo trang 29."
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "id": "grave-vu-ngoc-dien",
+    "personId": "vu-ngoc-dien",
+    "name": "Mộ cụ Vũ Ngọc Điền",
+    "lat": null,
+    "lng": null,
+    "status": "needs_location",
+    "note": "Cần điền tọa độ thực địa, ảnh bia, ghi chú đường đi."
+  },
+  {
+    "id": "grave-nguyen-thi-he",
+    "personId": "nguyen-thi-he",
+    "name": "Mộ cụ bà Nguyễn Thị Hè",
+    "lat": null,
+    "lng": null,
+    "status": "needs_location",
+    "note": "Cần điền tọa độ thực địa, ảnh bia, ghi chú đường đi."
+  },
+  {
+    "id": "grave-vu-thanh",
+    "personId": "vu-thanh",
+    "name": "Mộ cụ Vũ Thành & cụ bà Đặng Thị Thái",
+    "lat": 20.939289,
+    "lng": 105.848657,
+    "googleMapsUrl": "https://maps.app.goo.gl/pEQwFw7tMVAxF2n2A",
+    "cemeteryName": "Nghĩa trang gia tộc Chi Vũ Thành",
+    "status": "verified",
+    "photos": [
+      "/assets/graves/mo-vu-thanh-01.jpg",
+      "/assets/graves/mo-vu-thanh-02.jpg",
+      "/assets/graves/mo-vu-thanh-03.jpg"
+    ],
+    "routePhotos": [
+      "/assets/graves/duong-vao-mo-vu-thanh-01.jpg",
+      "/assets/graves/duong-vao-mo-vu-thanh-02.jpg",
+      "/assets/graves/duong-vao-mo-vu-thanh-02a.jpg"
+    ],
+    "routeNote": "Đường vào khu lăng mộ cụ Vũ Thành và cụ bà Đặng Thị Thái (Cách mộ ông Vũ Chí Thiện ~97m). Đã có liên kết Google Maps chỉ đường chuẩn xác.",
+    "note": "Khu lăng mộ song táng cụ Vũ Thành (từ trần 13h15 ngày 04/07/2008, tức 02/06 năm Mậu Tý tại nhà, hưởng thọ 86 tuổi) và cụ bà Đặng Thị Thái (mất ngày 18/06/1996, tức 03/05 năm Bính Tý, hưởng thọ 69 tuổi). Đã xác thực tọa độ GPS Google Maps và hình ảnh thực địa.",
+    "maintainerName": "Chi Vũ Thành · Đại diện: Vũ Trọng Nghĩa"
+  },
+  {
+    "id": "grave-vu-chi-thien",
+    "personId": "vu-chi-thien",
+    "name": "Mộ ông Vũ Chí Thiện",
+    "lat": 20.938939,
+    "lng": 105.849516,
+    "googleMapsUrl": "https://maps.app.goo.gl/Ays4VVw8dDXEwFUS7",
+    "cemeteryName": "Nghĩa trang gia tộc Chi Vũ Thành",
+    "status": "verified",
+    "photos": [
+      "/assets/graves/mo-vu-chi-thien.jpg"
+    ],
+    "routeNote": "Nằm trong cùng khu nghĩa trang gia tộc, cách khu lăng mộ cụ Vũ Thành khoảng 97m theo hướng Đông Nam. Đã có Google Maps chỉ đường trực tiếp.",
+    "note": "Mộ phần ông Vũ Chí Thiện (sinh 23/06/1953 – mất 06/06/1985). Đã xác thực tọa độ GPS Google Maps và ảnh chụp bia mộ thực địa.",
+    "maintainerName": "Chi Vũ Thành"
+  }
+]
