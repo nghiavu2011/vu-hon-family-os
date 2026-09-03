@@ -179,7 +179,12 @@ function FamilyOsApp() {
       <MemberDirectory people={people} onSelect={handleSelectPerson} />
 
       {/* Bản Đồ Mộ Phần & QR Tưởng Niệm (Có GPS Google Maps và ảnh thực địa) */}
-      <GraveMap graves={graves} people={people} />
+      <GraveMap
+        graves={graves}
+        people={people}
+        onSelectPerson={handleSelectPerson}
+        onOpenContribution={handleOpenContribution}
+      />
 
       {/* Lịch Giỗ Tổ & Lễ Tiết */}
       <EventList events={events} />

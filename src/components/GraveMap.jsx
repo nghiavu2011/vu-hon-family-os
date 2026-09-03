@@ -1,7 +1,7 @@
-
 import { useMemo, useState } from 'react';
 import QrCodeBox from './QrCodeBox.jsx';
 import GravePhotoUpload from './GravePhotoUpload.jsx';
+import { formatLunar } from '../lib/utils.js';
 import {
   getBounds,
   getGoogleMapsDirectionsUrl,
@@ -22,15 +22,28 @@ const CHECKLIST = [
   'Ngày cập nhật gần nhất',
 ];
 
-export default function GraveMap({ graves = [], people = [] }) {
+export default function GraveMap({
+  graves = [],
+  people = [],
+  onSelectPerson,
+  onOpenContribution,
+}) {
   const normalizedGraves = useMemo(() => graves.map(normalizeGrave), [graves]);
   const bounds = useMemo(() => getBounds(normalizedGraves), [normalizedGraves]);
-  const [selectedId, setSelectedId] = useState(normalizedGraves[0]?.id || '');
+  
+  // Ưu tiên chọn mộ đã có GPS (Mộ cụ Vũ Thành & cụ bà Đặng Thị Thái) khi mới tải trang
+  const [selectedId, setSelectedId] = useState(
+    normalizedGraves.find(hasCoordinates)?.id || normalizedGraves[0]?.id || ''
+  );
+  const [isSmoking, setIsSmoking] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview'); // 'overview' | 'photos' | 'checklist'
 
   const peopleById = useMemo(() => Object.fromEntries(people.map((person) => [person.id, person])), [people]);
   const selected = normalizedGraves.find((grave) => grave.id === selectedId) || normalizedGraves[0];
   const selectedPerson = selected?.personId ? peopleById[selected.personId] : null;
+  const isVerified = hasCoordinates(selected);
   const directionUrl = selected ? getGoogleMapsDirectionsUrl(selected) : '';
+
   const completedChecklist = selected ? [
     Boolean(selected.name),
     Boolean(selected.name),
@@ -41,18 +54,26 @@ export default function GraveMap({ graves = [], people = [] }) {
     Boolean(selected.updatedAt || selected.lastVisitedAt),
   ] : [];
 
+  const completedCount = completedChecklist.filter(Boolean).length;
+
+  const handleOfferIncense = () => {
+    setIsSmoking(true);
+    setTimeout(() => setIsSmoking(false), 3500);
+  };
+
   return (
     <section className="section wrap" id="grave-map">
       <div className="sectionHead">
         <div>
           <h2>Bản đồ mộ phần & QR tưởng niệm</h2>
           <p className="sub">
-            Tra cứu vị trí lăng mộ tổ tiên, định vị tọa độ Google Maps, quét mã QR tưởng niệm và hướng dẫn phụng vụ tảo mộ gia tiên.
+            Định vị vệ tinh Google Maps, số hóa bia mộ thực địa và hướng dẫn phụng vụ tảo mộ gia tiên muôn đời.
           </p>
         </div>
       </div>
 
       <div className="graveMapShell">
+        {/* Ô BÊN TRÁI: Bản đồ vệ tinh + Danh sách chọn nhanh các lăng mộ */}
         <div className="graveMapPanel">
           <div className="heritageMap">
             <img src="/assets/feature-clan-map.png" loading="lazy" alt="" />
@@ -64,7 +85,10 @@ export default function GraveMap({ graves = [], people = [] }) {
                   id={`grave-${getGraveSlug(grave)}`}
                   className={`graveMarker ${selected?.id === grave.id ? 'active' : ''}`}
                   style={position || undefined}
-                  onClick={() => setSelectedId(grave.id)}
+                  onClick={() => {
+                    setSelectedId(grave.id);
+                    setActiveTab('overview');
+                  }}
                   type="button"
                   title={grave.name}
                 >
@@ -79,94 +103,273 @@ export default function GraveMap({ graves = [], people = [] }) {
             ) : null}
           </div>
 
+          {/* Danh sách các lăng mộ */}
           <div className="graveList">
-            {normalizedGraves.map((grave) => (
-              <button
-                type="button"
-                key={grave.id}
-                className={selected?.id === grave.id ? 'active' : ''}
-                onClick={() => setSelectedId(grave.id)}
-              >
-                <b>{grave.name}</b>
-                <span>{hasCoordinates(grave) ? `${grave.lat}, ${grave.lng}` : 'Chưa có tọa độ'}</span>
-              </button>
-            ))}
+            {normalizedGraves.map((grave) => {
+              const isGraveWithGps = hasCoordinates(grave);
+              return (
+                <button
+                  type="button"
+                  key={grave.id}
+                  className={`graveListItemBtn ${selected?.id === grave.id ? 'active' : ''}`}
+                  onClick={() => {
+                    setSelectedId(grave.id);
+                    setActiveTab('overview');
+                  }}
+                >
+                  <div className="graveListTitle">
+                    <b>{grave.name}</b>
+                    <span className={`statusPill ${isGraveWithGps ? 'verified' : 'survey'}`}>
+                      {isGraveWithGps ? '📍 Đã có GPS' : '🔍 Khảo sát'}
+                    </span>
+                  </div>
+                  <span className="graveListSub">
+                    {isGraveWithGps ? `GPS: ${grave.lat}, ${grave.lng}` : 'Đang số hóa tư liệu thực địa'}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
+        {/* Ô BÊN PHẢI: Chi tiết mộ phần (Đồng bộ kích thước 1:1, vừa khít không cuộn) */}
         {selected ? (
           <aside className="graveDetail">
-            <h3>{selected.name}</h3>
-            <p className="sub">
-              {selectedPerson ? <>Liên kết hồ sơ: <b>{selectedPerson.name}</b></> : 'Chưa liên kết nhân danh.'}
-            </p>
-
-            <div className="graveInfoGrid">
-              <div><b>Tọa độ</b><span>{hasCoordinates(selected) ? `${selected.lat}, ${selected.lng}` : 'Chưa có'}</span></div>
-              <div><b>Khu mộ</b><span>{selected.cemeteryName || selected.graveArea || 'Chưa có'}</span></div>
-              <div><b>Trạng thái</b><span>{selected.status || 'needs_review'}</span></div>
-              <div><b>Quyền</b><span>{selected.privacy || 'family'}</span></div>
-            </div>
-
-            <p className="sub">{selected.routeNote || selected.note || 'Chưa có ghi chú đường đi.'}</p>
-
-            <div className="graveActions">
-              {directionUrl ? (
-                <a className="btn primary" href={directionUrl} target="_blank" rel="noreferrer">Chỉ đường Google Maps</a>
-              ) : (
-                <button className="btn primary" type="button" disabled>Chưa có tọa độ</button>
-              )}
-              <a className="btn" href={`#person-${selected.personId || ''}`}>Mở hồ sơ người</a>
-            </div>
-
-            <QrCodeBox value={getGraveUrl(selected)} label={`QR ${selected.name}`} />
-
-            {/* Thư viện ảnh mộ phần thực địa */}
-            {selected.photos && selected.photos.length > 0 && (
-              <div className="gravePhotoGallery">
-                <h4>📸 Ảnh chụp phần mộ thực địa ({selected.photos.length}):</h4>
-                <div className="gravePhotoGrid">
-                  {selected.photos.map((src, idx) => (
-                    <a key={idx} href={src} target="_blank" rel="noopener noreferrer" className="gravePhotoItem" title="Bấm để xem ảnh phóng to">
-                      <img src={src} alt={`${selected.name} - ảnh ${idx + 1}`} loading="lazy" />
-                      <span>Ảnh mộ #{idx + 1} 🔍</span>
-                    </a>
-                  ))}
+            {!isVerified ? (
+              /* ====================================================================
+                 GIAO DIỆN TINH GỌN VỪA KHÍT 1 MÀN HÌNH CHO MỘ CỤ VŨ NGỌC ĐIỀN
+                 (Không cuộn lên cuộn xuống, bố cục tôn nghiêm, tính năng thiết thực)
+                 ==================================================================== */
+              <div className="surveyGraveBox">
+                <div className="surveyHeader">
+                  <div className="surveyStatusTag">
+                    <span>🔍 Hồ sơ khảo sát & xác thực thực địa</span>
+                  </div>
+                  <h3>{selected.name}</h3>
+                  <p className="sub">
+                    {selectedPerson?.aka?.length ? <>Tự danh: <b>{selectedPerson.aka.join(', ')}</b> · </> : null}
+                    Đời {selectedPerson?.gen || 3} · {selectedPerson?.branch || 'Chi Vũ Văn Rũi'}
+                  </p>
                 </div>
+
+                {/* Bảng phả ký & quan hệ thế thứ */}
+                <div className="surveyGenealogyGrid">
+                  <div className="sgItem">
+                    <span className="sgLabel">📅 Năm sinh:</span>
+                    <b className="sgVal">{selectedPerson?.birthYear ? `${selectedPerson.birthYear} (Đinh Hợi)` : '1887'}</b>
+                  </div>
+                  <div className="sgItem">
+                    <span className="sgLabel">🕯 Ngày kỵ nhật:</span>
+                    <b className="sgVal">{selectedPerson?.lunarDeath ? `${formatLunar(selectedPerson.lunarDeath)} Âm lịch` : '22/05 Âm'}</b>
+                  </div>
+                  <div className="sgItem">
+                    <span className="sgLabel">💍 Phối ngẫu:</span>
+                    <b className="sgVal">Cụ bà Nguyễn Thị Hè</b>
+                  </div>
+                  <div className="sgItem">
+                    <span className="sgLabel">🌿 Thế thứ nối đời:</span>
+                    <b className="sgVal">Thân phụ Cụ Vũ Thành & Cụ Vũ Điền</b>
+                  </div>
+                </div>
+
+                {/* Khối Lời ngỏ & kêu gọi đóng góp */}
+                <div className="surveyNoticeCard">
+                  <div className="snTitle">
+                    <b>📍 Tình trạng thực địa:</b> <span>Đang số hóa tọa độ & ảnh chụp bia mộ</span>
+                  </div>
+                  <p>
+                    {selected.note || 'Ban liên lạc đang tập hợp tọa độ GPS và sơ đồ nghĩa trang của Cụ.'} Quý con cháu trong chi phái biết vị trí lăng mộ hoặc lưu giữ ảnh bia mộ, xin gửi tư liệu về hệ thống để hoàn thiện bản đồ phụng tự cho muôn đời con cháu.
+                  </p>
+                </div>
+
+                {/* Thanh tiến độ số hóa dạng compact */}
+                <div className="surveyProgressBarWrap">
+                  <div className="spbHead">
+                    <span>Tiến độ số hóa dữ liệu mộ phần:</span>
+                    <b>{completedCount}/7 tiêu chí</b>
+                  </div>
+                  <div className="spbTrack">
+                    <div className="spbFill" style={{ width: `${(completedCount / 7) * 100}%` }} />
+                  </div>
+                </div>
+
+                {/* Cụm tính năng 1-chạm không cần cuộn */}
+                <div className="surveyActions">
+                  <button
+                    type="button"
+                    className="btn primary smallBtn"
+                    onClick={() => onOpenContribution && onOpenContribution(selectedPerson || { name: selected.name })}
+                  >
+                    ✍️ Gửi Tọa Độ / Ảnh Mộ
+                  </button>
+                  {selectedPerson && (
+                    <button
+                      type="button"
+                      className="btn smallBtn"
+                      onClick={() => onSelectPerson && onSelectPerson(selectedPerson.id)}
+                    >
+                      📖 Xem Hồ Sơ Cụ
+                    </button>
+                  )}
+                  <a
+                    href="https://zalo.me/0985578385"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn smallBtn zaloGraveBtn"
+                  >
+                    💬 Báo Ban Liên Lạc (Zalo)
+                  </a>
+                  <button
+                    type="button"
+                    className="btn smallBtn incenseGraveBtn"
+                    onClick={handleOfferIncense}
+                  >
+                    {isSmoking ? '✨ Đang dâng hương...' : '🪔 Thắp nén tâm hương'}
+                  </button>
+                </div>
+
+                {isSmoking && (
+                  <div className="smokeBanner">
+                    <i>Khói trầm quyện tỏa, lòng thành kính hướng về Cụ Nhang Điền...</i>
+                  </div>
+                )}
+              </div>
+            ) : (
+              /* ====================================================================
+                 GIAO DIỆN CHO MỘ ĐÃ XÁC THỰC GPS (CỤ VŨ THÀNH & ÔNG VŨ CHÍ THIỆN)
+                 (Có Tabs gọn gàng, vừa khít không cuộn thừa)
+                 ==================================================================== */
+              <div className="verifiedGraveBox">
+                <div className="verifiedHead">
+                  <div className="verifiedBadge">📍 Đã xác thực tọa độ GPS & Thực địa</div>
+                  <h3>{selected.name}</h3>
+                  <p className="sub">
+                    {selectedPerson ? <>Nhân thân: <b>{selectedPerson.name}</b> · Đời {selectedPerson.gen || '?'}</> : selected.cemeteryName}
+                  </p>
+                </div>
+
+                {/* Tab chuyển đổi thông tin gọn gàng */}
+                <div className="graveTabsNav">
+                  <button
+                    type="button"
+                    className={`gTabBtn ${activeTab === 'overview' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('overview')}
+                  >
+                    🧭 Chỉ Đường & GPS
+                  </button>
+                  <button
+                    type="button"
+                    className={`gTabBtn ${activeTab === 'photos' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('photos')}
+                  >
+                    📸 Ảnh Mộ ({selected.photos?.length || 0})
+                  </button>
+                  <button
+                    type="button"
+                    className={`gTabBtn ${activeTab === 'checklist' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('checklist')}
+                  >
+                    📋 Checklist ({completedCount}/7)
+                  </button>
+                </div>
+
+                {/* Tab 1: Tổng quan chỉ đường Google Maps & QR */}
+                {activeTab === 'overview' && (
+                  <div className="tabContent tabOverview">
+                    <div className="graveInfoGrid">
+                      <div><b>Tọa độ GPS</b><span>{selected.lat}, {selected.lng}</span></div>
+                      <div><b>Khu nghĩa trang</b><span>{selected.cemeteryName || 'Khu gia tộc'}</span></div>
+                    </div>
+
+                    <p className="graveRouteNote">
+                      📍 {selected.routeNote || selected.note}
+                    </p>
+
+                    <div className="graveActionsRow">
+                      <a className="btn primary" href={directionUrl} target="_blank" rel="noreferrer">
+                        🗺 Chỉ đường Google Maps
+                      </a>
+                      {selectedPerson && (
+                        <button
+                          type="button"
+                          className="btn"
+                          onClick={() => onSelectPerson && onSelectPerson(selectedPerson.id)}
+                        >
+                          📖 Xem Hồ Sơ Gia Phả
+                        </button>
+                      )}
+                      <button
+                        type="button"
+                        className="btn incenseGraveBtn"
+                        onClick={handleOfferIncense}
+                      >
+                        {isSmoking ? '✨ Đang dâng hương...' : '🪔 Thắp nén tâm hương'}
+                      </button>
+                    </div>
+
+                    <QrCodeBox value={getGraveUrl(selected)} label={`QR ${selected.name}`} />
+
+                    {isSmoking && (
+                      <div className="smokeBanner">
+                        <i>Khói trầm hương quyện tỏa, thành kính tưởng nhớ tiên tổ...</i>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Tab 2: Thư viện ảnh mộ phần thực địa */}
+                {activeTab === 'photos' && (
+                  <div className="tabContent tabPhotos">
+                    {selected.photos && selected.photos.length > 0 ? (
+                      <div className="gravePhotoGrid">
+                        {selected.photos.map((src, idx) => (
+                          <a key={idx} href={src} target="_blank" rel="noopener noreferrer" className="gravePhotoItem" title="Bấm xem ảnh to">
+                            <img src={src} alt={`${selected.name} - ảnh ${idx + 1}`} loading="lazy" />
+                            <span>Ảnh mộ #{idx + 1} 🔍</span>
+                          </a>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="empty">Chưa có ảnh mộ phần thực địa.</p>
+                    )}
+
+                    {selected.routePhotos && selected.routePhotos.length > 0 && (
+                      <div className="routePhotoBlock">
+                        <b>🚶 Ảnh lối vào khu lăng mộ:</b>
+                        <div className="gravePhotoGrid mini">
+                          {selected.routePhotos.map((src, idx) => (
+                            <a key={idx} href={src} target="_blank" rel="noopener noreferrer" className="gravePhotoItem" title="Bấm xem ảnh to">
+                              <img src={src} alt="Lối vào" loading="lazy" />
+                              <span>Lối vào #{idx + 1} 🔍</span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Tab 3: Checklist số hóa & phụng vụ */}
+                {activeTab === 'checklist' && (
+                  <div className="tabContent tabChecklist">
+                    <div className="checklistGrid">
+                      {CHECKLIST.map((item, index) => (
+                        <label key={item} className="checkItem">
+                          <input type="checkbox" checked={Boolean(completedChecklist[index])} readOnly />
+                          <span>{item}</span>
+                        </label>
+                      ))}
+                    </div>
+                    <GravePhotoUpload grave={selected} />
+                  </div>
+                )}
               </div>
             )}
-
-            {/* Thư viện ảnh đường vào */}
-            {selected.routePhotos && selected.routePhotos.length > 0 && (
-              <div className="gravePhotoGallery routeGallery">
-                <h4>🚶 Ảnh chụp lối vào & đường đi ({selected.routePhotos.length}):</h4>
-                <div className="gravePhotoGrid">
-                  {selected.routePhotos.map((src, idx) => (
-                    <a key={idx} href={src} target="_blank" rel="noopener noreferrer" className="gravePhotoItem" title="Bấm để xem ảnh phóng to">
-                      <img src={src} alt={`${selected.name} - lối đi ${idx + 1}`} loading="lazy" />
-                      <span>Lối vào #{idx + 1} 🔍</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <GravePhotoUpload grave={selected} />
-
-            <div className="graveChecklist">
-              <h3>Checklist tảo mộ</h3>
-              {CHECKLIST.map((item, index) => (
-                <label key={item}>
-                  <input type="checkbox" checked={Boolean(completedChecklist[index])} readOnly />
-                  <span>{item}</span>
-                </label>
-              ))}
-            </div>
           </aside>
         ) : (
           <aside className="graveDetail">
             <h3>Chưa có dữ liệu mộ phần</h3>
-            <p className="sub">Hãy nhập mộ phần trong CMS.</p>
+            <p className="sub">Hãy chọn một mộ phần ở danh sách bên trái.</p>
           </aside>
         )}
       </div>
