@@ -8,7 +8,7 @@ const BRANCH_LINEAGES = [
     desc: 'Mô hình phả hệ hoàn chỉnh 7 đời liền mạch từ Thủy tổ ngành đến các thế hệ con cháu kế nghiệp hiện tại.',
     nodes: [
       { name: 'Vũ Bá Oanh', gen: 'Thủy tổ', years: 'Khởi đầu ngành' },
-      { name: 'Vũ Văn Rùi', gen: 'Đời 2', years: 'Cụ thôn Rùi' },
+      { name: 'Vũ Văn Rũi', gen: 'Đời 2', years: 'Cụ thôn Rũi (Bà Nguyễn Thị Nhài)' },
       { name: 'Vũ Ngọc Điền', gen: 'Đời 3', years: '1887 – 1960' },
       { name: 'Vũ Thành', gen: 'Đời 4', years: '1923 – 2008' },
       { name: 'Vũ Hữu Dũng', gen: 'Đời 5', years: '1955 – 2026' },
@@ -23,7 +23,7 @@ const BRANCH_LINEAGES = [
     desc: 'Nhánh phả hệ con cháu định cư và lập nghiệp qua nhiều thế hệ tại Hà Nội.',
     nodes: [
       { name: 'Vũ Bá Oanh', gen: 'Thủy tổ', years: 'Khởi đầu ngành' },
-      { name: 'Vũ Văn Rùi', gen: 'Đời 2', years: 'Cụ thôn Rùi' },
+      { name: 'Vũ Văn Rũi', gen: 'Đời 2', years: 'Cụ thôn Rũi (Bà Nguyễn Thị Nhài)' },
       { name: 'Vũ Ngọc Điền', gen: 'Đời 3', years: '1887 – 1960' },
       { name: 'Vũ Điền', gen: 'Đời 4', years: '1917 – 1984' },
       { name: 'Vũ Việt Hồng', gen: 'Đời 5', years: 'Sinh 1945' },
@@ -37,7 +37,7 @@ const BRANCH_LINEAGES = [
     desc: 'Cội nguồn phát dương từ Thủy tổ ngành phân bố sang 6 chi lớn đời thứ hai.',
     nodes: [
       { name: 'Vũ Bá Oanh', gen: 'Thủy tổ', years: 'Khởi đầu ngành' },
-      { name: 'Vũ Văn Rùi', gen: 'Trưởng chi', years: 'Chi thôn Rùi' },
+      { name: 'Vũ Văn Rũi', gen: 'Trưởng chi', years: 'Chi thôn Rũi' },
       { name: 'Vũ Văn Kháng', gen: 'Chi thứ 2', years: 'Đời 2' },
       { name: 'Vũ Hỷ', gen: 'Chi thứ 3', years: 'Đời 2' },
       { name: 'Vũ Thái', gen: 'Chi thứ 4', years: 'Đời 2' },

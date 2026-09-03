@@ -5,7 +5,7 @@ export default function ContributionModal({ people, targetPerson, onClose, onSub
   const [name, setName] = useState('');
   const [gender, setGender] = useState('male');
   const [parentName, setParentName] = useState(targetPerson?.name || '');
-  const [branch, setBranch] = useState(targetPerson?.branch || 'Chi Vũ Văn Rùi');
+  const [branch, setBranch] = useState(targetPerson?.branch || 'Chi Vũ Văn Rũi');
   const [birthYear, setBirthYear] = useState('');
   const [lunarDeath, setLunarDeath] = useState('');
   const [career, setCareer] = useState('');
@@ -120,7 +120,7 @@ export default function ContributionModal({ people, targetPerson, onClose, onSub
                 <label>Chi phái / Nhánh họ:</label>
                 <input
                   type="text"
-                  placeholder="Ví dụ: Chi Vũ Văn Rùi"
+                  placeholder="Ví dụ: Chi Vũ Văn Rũi"
                   value={branch}
                   onChange={(e) => setBranch(e.target.value)}
                 />

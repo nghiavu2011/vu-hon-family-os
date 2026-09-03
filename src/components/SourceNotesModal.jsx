@@ -7,8 +7,8 @@ const notes = [
   },
   {
     page: 'Trang 28',
-    title: 'Phân chi cụ Thôn Rùi',
-    text: 'Chi cụ thôn Rùi gồm Vũ Ngọc Điền, Vũ Văn Đạc, Vũ Văn Quyến, Vũ Văn Rong, Vũ Văn Cừu...',
+    title: 'Phân chi cụ Thôn Rũi (Cụ bà Nguyễn Thị Nhài)',
+    text: 'Chi cụ thôn Rũi (Vũ Văn Rũi) và cụ bà Nguyễn Thị Nhài gồm Vũ Ngọc Điền, Vũ Văn Đạc, Vũ Văn Quyến, Vũ Văn Rong, Vũ Văn Cừu...',
     note: 'Nguồn văn thư lưu giữ chi tiết thế thứ đời thứ 2 và thứ 3.',
   },
   {

@@ -1,6 +1,6 @@
 const notes = [
   ['Trang 26', 'Cụ Vũ Bá Oanh và cụ bà sinh sáu con trai, ba con gái; có ngày giỗ cụ bà 13/12 âm lịch.'],
-  ['Trang 28', 'Chi cụ thôn Rùi gồm Vũ Ngọc Điền, Vũ Văn Đạc, Vũ Văn Quyến, Vũ Văn Rong, Vũ Văn Cừu...'],
+  ['Trang 28', 'Chi cụ thôn Rũi (Cụ bà Nguyễn Thị Nhài) gồm Vũ Ngọc Điền, Vũ Văn Đạc, Vũ Văn Quyến, Vũ Văn Rong, Vũ Văn Cừu...'],
   ['Trang 29', 'Cụ Vũ Ngọc Điền, cụ bà Nguyễn Thị Hè, ông Vũ Điền tức Miền, bà Nguyễn Thị Cúc.'],
   ['Trang 30', 'Vũ Việt Hồng tức Vũ Đức Mừng, Phùng Thị Thanh Hà, Vũ Quang, Vũ Thị Hồng Hạnh.'],
 ];

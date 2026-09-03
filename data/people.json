@@ -47,14 +47,14 @@
   },
   {
     "id": "vu-van-rui",
-    "name": "Vũ Văn Rùi",
+    "name": "Vũ Văn Rũi",
     "gender": "male",
     "aka": [
-      "Vũ Rùi",
-      "Cụ thôn Rùi"
+      "Vũ Rũi",
+      "Cụ thôn Rũi"
     ],
     "gen": 2,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-ba-oanh",
     "motherId": "vo-vu-ba-oanh",
     "spouseIds": [
@@ -72,17 +72,17 @@
       "vu-thi-cu",
       "vu-thi-ly"
     ],
-    "note": "Một trong sáu con trai cụ Vũ Bá Oanh. Trang 28 ghi riêng chi nhà cụ thôn Rùi.",
+    "note": "Cụ Vũ Văn Rũi, một trong sáu con trai của cụ Vũ Bá Oanh. Phối ngẫu cùng cụ bà Nguyễn Thị Nhài. Trang 28 phả ký ghi riêng chi nhà cụ thôn Rũi.",
     "confidence": "high",
     "privacy": "public",
     "source": "PDF trang 1, 26, 28"
   },
   {
     "id": "vo-vu-van-rui",
-    "name": "Cụ bà, vợ cụ Vũ Văn Rùi",
+    "name": "Nguyễn Thị Nhài",
     "gender": "female",
     "gen": 2,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "spouseIds": [
       "vu-van-rui"
     ],
@@ -98,10 +98,10 @@
       "vu-thi-cu",
       "vu-thi-ly"
     ],
-    "note": "Chưa có tên trong phần PDF đã đọc. Cần xác minh thêm từ bia mộ, gia đình hoặc tư liệu bổ sung.",
-    "confidence": "low",
+    "note": "Cụ bà Nguyễn Thị Nhài, phối ngẫu của cụ Vũ Văn Rũi. Hai cụ cùng sinh hạ 10 người con trai, con gái tiếp nối dòng họ.",
+    "confidence": "high",
     "privacy": "public",
-    "source": "Dữ liệu cần bổ sung"
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
   },
   {
     "id": "vu-van-khang",
@@ -184,7 +184,7 @@
       "Cụ nhang Điền"
     ],
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "spouseIds": [
@@ -211,7 +211,7 @@
     "name": "Nguyễn Thị Hè",
     "gender": "female",
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "spouseIds": [
       "vu-ngoc-dien"
     ],
@@ -241,7 +241,7 @@
       "Cụ nhang Đạc"
     ],
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -258,7 +258,7 @@
       "Cụ Sứ Quyến"
     ],
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -275,7 +275,7 @@
       "Cụ nhang Rong"
     ],
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -292,7 +292,7 @@
       "Cụ Sứ Cừu"
     ],
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -306,7 +306,7 @@
     "name": "Vũ Ký",
     "gender": "male",
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -320,7 +320,7 @@
     "name": "Vũ Nhâm",
     "gender": "male",
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -334,7 +334,7 @@
     "name": "Vũ Thị Ngoan",
     "gender": "female",
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -348,7 +348,7 @@
     "name": "Vũ Thị Cư",
     "gender": "female",
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -362,7 +362,7 @@
     "name": "Vũ Thị Lý",
     "gender": "female",
     "gen": 3,
-    "branch": "Chi Vũ Văn Rùi",
+    "branch": "Chi Vũ Văn Rũi",
     "fatherId": "vu-van-rui",
     "motherId": "vo-vu-van-rui",
     "childrenIds": [],
@@ -525,7 +525,7 @@
       "/assets/graves/mo-vu-thanh-02.jpg",
       "/assets/graves/mo-vu-thanh-03.jpg"
     ],
-    "note": "Cụ Vũ Thành từ trần hồi 13h15 phút ngày 04/07/2008 (tức ngày 02/06 năm Mậu Tý) tại nhà, hưởng thọ 86 tuổi. Khu lăng mộ song táng cùng cụ bà Đặng Thị Thái.",
+    "note": "Cụ Vũ Thành từ trần hồi 13h15 phút ngày 04/07/2008 (tức ngày 02/06 năm Mậu Tý) tại nhà, hưởng thọ 86 tuổi. Khu lăng mộ song táng cùng cụ bà Đặng Thị Thái. Hai cụ sinh hạ các người con tiếp nối: Vũ Thị Thanh Hằng, Vũ Chí Thiện, Vũ Hữu Dũng, Vũ Chính Tường, Vũ Đức Tùng, Vũ Thị Vân Yên, Vũ Thị Thu Hà; cùng 3 người con gái mất từ thuở bé gồm: Vũ Thị Hằng A, Vũ Thị Hoa và Vũ Thị Mão.",
     "confidence": "high",
     "privacy": "public",
     "source": "Dữ liệu gia đình cung cấp trực tiếp"
@@ -553,14 +553,14 @@
     "lunarDeath": "03-05",
     "lunarDeathYear": "Bính Tý",
     "graveId": "grave-vu-thanh",
-    "note": "Cụ bà Đặng Thị Thái mất vào ngày 18/06/1996 (tức ngày 03/05 năm Bính Tý), hưởng thọ 69 tuổi. Khu lăng mộ song táng cùng cụ Vũ Thành.",
+    "note": "Cụ bà Đặng Thị Thái mất vào ngày 18/06/1996 (tức ngày 03/05 năm Bính Tý), hưởng thọ 69 tuổi. Khu lăng mộ song táng cùng cụ Vũ Thành. Hai cụ sinh hạ các người con tiếp nối: Vũ Thị Thanh Hằng, Vũ Chí Thiện, Vũ Hữu Dũng, Vũ Chính Tường, Vũ Đức Tùng, Vũ Thị Vân Yên, Vũ Thị Thu Hà; cùng 3 người con gái mất từ thuở bé gồm: Vũ Thị Hằng A, Vũ Thị Hoa và Vũ Thị Mão.",
     "confidence": "high",
     "privacy": "public",
     "source": "Dữ liệu gia đình cung cấp trực tiếp"
   },
   {
     "id": "vu-thi-hang",
-    "name": "Vũ Thị Hằng",
+    "name": "Vũ Thị Thanh Hằng",
     "gender": "female",
     "gen": 5,
     "branch": "Chi Vũ Thành",
@@ -572,11 +572,12 @@
     "birthDate": "1949-02-12",
     "confidence": "high",
     "privacy": "family",
-    "source": "Dữ liệu gia đình bổ sung"
+    "source": "Dữ liệu gia đình bổ sung",
+    "note": "Bà Vũ Thị Thanh Hằng, con gái cụ Vũ Thành và cụ bà Đặng Thị Thái. Thân mẫu của anh Ngô Trọng Long."
   },
   {
     "id": "ngo-trong-long",
-    "name": "Ngọ Trọng Long",
+    "name": "Ngô Trọng Long",
     "gender": "male",
     "gen": 6,
     "branch": "Chi Vũ Thành",
@@ -585,7 +586,8 @@
     "birthDate": "1976-04-25",
     "confidence": "high",
     "privacy": "family",
-    "source": "Dữ liệu gia đình bổ sung"
+    "source": "Dữ liệu gia đình bổ sung",
+    "note": "Anh Ngô Trọng Long, con trai bà Vũ Thị Thanh Hằng, cháu ngoại cụ Vũ Thành."
   },
   {
     "id": "vu-chi-thien",
