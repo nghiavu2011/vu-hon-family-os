@@ -31,6 +31,9 @@ export default function QuickNavPills({ onOpenSources, onOpenPrivacy }) {
           </div>
 
           <div className="quickNavButtons">
+            <button type="button" className="quickNavBtn" onClick={() => scrollTo('heritage-video')}>
+              🎬 Phim Di Sản
+            </button>
             <button type="button" className="quickNavBtn" onClick={() => scrollTo('tree')}>
               🌳 Cây Phả Hệ
             </button>

@@ -126,6 +126,50 @@ export default function PersonDrawer({
         <div className="kv"><b>Thân mẫu (Mẹ)</b><span><PersonPill person={mother} onSelect={onSelect} /></span></div>
         <div className="kv"><b>Phối ngẫu (Vợ/Chồng)</b><span>{spouses.length ? spouses.map((item) => <PersonPill key={item.id} person={item} onSelect={onSelect} />) : 'Chưa có thông tin'}</span></div>
         <div className="kv"><b>Hậu duệ (Con cái)</b><span>{children.length ? children.map((item) => <PersonPill key={item.id} person={item} onSelect={onSelect} />) : 'Chưa có thông tin'}</span></div>
+        
+        {/* Khối Gia tiên bên Ngoại đối với chị Nguyễn Sao Mai */}
+        {person.id === 'nguyen-sao-mai' && (
+          <div className="maternalAncestorsCard">
+            <div className="maternalHead">
+              <span>🌸 Gia Tiên Bên Ngoại (Đời 6 & 7 Chi Vũ Thành Phụng Tự)</span>
+            </div>
+            <p className="maternalIntro">
+              Chị Nguyễn Sao Mai là con một duy nhất. Theo truyền thống đạo hiếu gia đình, ngày kỵ nhật của hai cụ được lưu truyền trong Chi Vũ Thành để các thế hệ con cháu đời 6 và đời 7 ghi nhớ, phụng tự chu tất:
+            </p>
+            <div className="maternalList">
+              <button
+                type="button"
+                className="maternalItemBtn"
+                onClick={() => onSelect && onSelect('nguyen-van-son')}
+              >
+                <div className="maternalItemTitle">
+                  <b>👴 Thân phụ: Cụ Ông Nguyễn Văn Sơn</b>
+                  <span className="maternalTag">1951 – 2026</span>
+                </div>
+                <div className="maternalItemInfo">
+                  <span>🕯 Giỗ: <b>17/07 Âm lịch</b> (17/7 Bính Ngọ)</span>
+                  <span>📍 An táng: Xã Lý Nhân, Ninh Bình 🔍 (Bấm xem)</span>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                className="maternalItemBtn"
+                onClick={() => onSelect && onSelect('nguyen-thi-kim-lien')}
+              >
+                <div className="maternalItemTitle">
+                  <b>👵 Thân mẫu: Cụ Bà Nguyễn Thị Kim Liên</b>
+                  <span className="maternalTag">Mất 2013</span>
+                </div>
+                <div className="maternalItemInfo">
+                  <span>🕯 Giỗ: <b>25/12 Âm lịch</b> (25/12 Nhâm Thìn)</span>
+                  <span>📍 An táng: Quê chồng Xã Lý Nhân, Ninh Bình 🔍 (Bấm xem)</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        )}
+
         <div className="kv"><b>Nguồn trích dẫn phả ký</b><span>{person.source || 'Chưa ghi nguồn'}</span></div>
         
         {/* Ảnh mộ phần thực địa trong hồ sơ */}

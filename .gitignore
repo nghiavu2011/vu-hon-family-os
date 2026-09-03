@@ -38,3 +38,4 @@ archive_meta.json
 .github/
 image/video/
 *.mp4
+!public/assets/video/*.mp4

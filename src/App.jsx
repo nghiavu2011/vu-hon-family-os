@@ -6,6 +6,7 @@ import StatsBar from './components/StatsBar.jsx';
 import QuickNavPills from './components/QuickNavPills.jsx';
 import LineagePreview from './components/LineagePreview.jsx';
 import ModuleCards from './components/ModuleCards.jsx';
+import HeritageVideoSection from './components/HeritageVideoSection.jsx';
 import FamilyTree from './components/FamilyTree.jsx';
 import KinshipCalculator from './components/KinshipCalculator.jsx';
 import PersonDrawer from './components/PersonDrawer.jsx';
@@ -161,6 +162,9 @@ function FamilyOsApp() {
 
       {/* Cổng Tiện Ích Khám Phá Nhanh */}
       <ModuleCards onOpenSources={() => setShowSourceNotesModal(true)} />
+
+      {/* Thước Phim Di Sản: Nguồn Gốc Dòng Họ Vũ - Võ Tại Việt Nam */}
+      <HeritageVideoSection />
 
       {/* Cây Phả Hệ Tộc Họ Trực Quan */}
       <FamilyTree people={people} onSelect={handleSelectPerson} />

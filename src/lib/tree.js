@@ -36,6 +36,7 @@ export function buildFlowGraph({ people, searchText = '', branch = '' }) {
   }
 
   function shouldShow(person) {
+    if (person.excludeFromTree) return false;
     if (!searchText && !branch) return true;
     if (personMatches(person)) return true;
 
@@ -53,7 +54,7 @@ export function buildFlowGraph({ people, searchText = '', branch = '' }) {
     });
   }
 
-  const visiblePeople = people.filter(shouldShow);
+  const visiblePeople = people.filter((p) => !p.excludeFromTree && shouldShow(p));
   const visibleIds = new Set(visiblePeople.map((person) => person.id));
 
   // Đếm tổng số hậu duệ của 1 người để sắp xếp cân bằng

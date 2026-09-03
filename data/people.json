@@ -697,6 +697,7 @@
     "gender": "male",
     "gen": 5,
     "branch": "Chi Vũ Thành",
+    "excludeFromTree": true,
     "spouseIds": [
       "nguyen-thi-kim-lien"
     ],
@@ -719,6 +720,7 @@
     "gender": "female",
     "gen": 5,
     "branch": "Chi Vũ Thành",
+    "excludeFromTree": true,
     "spouseIds": [
       "nguyen-van-son"
     ],
