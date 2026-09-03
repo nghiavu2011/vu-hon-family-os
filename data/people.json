@@ -676,6 +676,8 @@
     "gender": "female",
     "gen": 6,
     "branch": "Chi Vũ Thành",
+    "fatherId": "nguyen-van-son",
+    "motherId": "nguyen-thi-kim-lien",
     "spouseIds": [
       "vu-trong-nghia"
     ],
@@ -684,7 +686,50 @@
       "vu-nhat-minh"
     ],
     "birthDate": "1984-06-26",
-    "note": "Con dâu họ Vũ, vợ ông Vũ Trọng Nghĩa.",
+    "note": "Con dâu họ Vũ, vợ ông Vũ Trọng Nghĩa. Là con một duy nhất của ông Nguyễn Văn Sơn và bà Nguyễn Thị Kim Liên. Theo phong tục đạo hiếu, ngày giỗ của hai cụ được lưu truyền trong Chi Vũ Thành từ đời 6 để đời 7 ghi nhớ phụng dưỡng, thờ cúng.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "nguyen-van-son",
+    "name": "Nguyễn Văn Sơn",
+    "gender": "male",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "nguyen-thi-kim-lien"
+    ],
+    "childrenIds": [
+      "nguyen-sao-mai"
+    ],
+    "birthYear": 1951,
+    "deathDate": "2026-08-29",
+    "lunarDeath": "17-07",
+    "lunarDeathYear": "Bính Ngọ",
+    "tombLocation": "Xã Lý Nhân, tỉnh Ninh Bình",
+    "note": "Nhạc phụ của anh Vũ Trọng Nghĩa, thân phụ chị Nguyễn Sao Mai (con một duy nhất). Sinh năm 1951, tạ thế ngày 29/08/2026 (tức ngày 17 tháng 7 năm Bính Ngọ). An táng tại quê nhà Xã Lý Nhân, tỉnh Ninh Bình. Kỵ nhật lưu truyền từ đời 6 để đời 7 Chi Vũ Thành ghi nhớ phụng dưỡng, thờ cúng.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình cung cấp trực tiếp"
+  },
+  {
+    "id": "nguyen-thi-kim-lien",
+    "name": "Nguyễn Thị Kim Liên",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "nguyen-van-son"
+    ],
+    "childrenIds": [
+      "nguyen-sao-mai"
+    ],
+    "deathDate": "2013-02-05",
+    "lunarDeath": "25-12",
+    "lunarDeathYear": "Nhâm Thìn",
+    "tombLocation": "Xã Lý Nhân, tỉnh Ninh Bình",
+    "note": "Nhạc mẫu của anh Vũ Trọng Nghĩa, thân mẫu chị Nguyễn Sao Mai (con một duy nhất). Tạ thế ngày 05/02/2013 (tức ngày 25 tháng 12 năm Nhâm Thìn). An táng tại quê chồng Xã Lý Nhân, tỉnh Ninh Bình. Kỵ nhật lưu truyền từ đời 6 để đời 7 Chi Vũ Thành ghi nhớ phụng dưỡng, thờ cúng.",
     "confidence": "high",
     "privacy": "family",
     "source": "Dữ liệu gia đình cung cấp trực tiếp"

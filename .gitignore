@@ -36,3 +36,5 @@ archive_meta.json
 
 .vercel
 .github/
+image/video/
+*.mp4

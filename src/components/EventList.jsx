@@ -72,9 +72,12 @@ Nam mô A Di Đà Phật! (3 lần, 3 lạy)`;
         {sorted.map((event) => (
           <div className="eventItem" key={`${event.personId}-${event.dateLunar}`}>
             <div className="eventDate">{formatLunar(event.dateLunar)}</div>
-            <div>
+            <div className="eventDetails">
               <b>{event.title}</b>
-              <div className="sub">{event.branch}</div>
+              <div className="sub">
+                <span className="eventBranchBadge">{event.branch}</span>
+                {event.note ? <span className="eventNoteText"> · {event.note}</span> : null}
+              </div>
             </div>
             <img src="/assets/incense-altar.png" alt="" />
           </div>
