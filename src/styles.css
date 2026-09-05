@@ -4327,6 +4327,191 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
   border:1px solid #fecdd3 !important;
 }
 
+/* ==========================================================================
+   Mã QR Toàn Năng (Website QR Modal) & Hướng Dẫn Cài App Safari / Chrome / Cốc Cốc
+   ========================================================================== */
+.websiteQrModalCard{
+  max-width:680px;
+  width:95%;
+  background:linear-gradient(180deg,#fffdf7,#fbf4e5);
+  border:2px solid var(--gold);
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 24px 70px rgba(0,0,0,.45);
+}
+.qrModalHead{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.qrModalIcon{
+  font-size:32px;
+  line-height:1;
+}
+.qrModalHead h3{
+  margin:0 0 2px;
+  color:var(--son);
+  font-size:19px;
+}
+.websiteQrBody{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:20px;
+  margin-top:16px;
+  align-items:start;
+}
+@media(max-width:680px){
+  .websiteQrBody{
+    grid-template-columns:1fr;
+  }
+}
+.qrDisplayFrame{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:#fff;
+  border:1.5px solid rgba(199,154,66,.45);
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 4px 16px rgba(199,154,66,.15);
+}
+.qrImageWrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.qrMainImg{
+  width:220px;
+  height:220px;
+  border-radius:12px;
+  border:1px solid rgba(199,154,66,.3);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.qrLoadingMock{
+  width:220px;
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f8f8f8;
+  border-radius:12px;
+  color:var(--muted);
+  font-size:13px;
+}
+.qrUrlBadge{
+  font-family:monospace;
+  font-size:11px;
+  background:rgba(199,154,66,.12);
+  border:1px solid rgba(199,154,66,.3);
+  padding:3px 8px;
+  border-radius:6px;
+  color:var(--son);
+  word-break:break-all;
+  text-align:center;
+}
+.qrActionButtons{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  width:100%;
+  margin-top:12px;
+}
+.qrActionButtons .btn{
+  width:100%;
+  justify-content:center;
+  font-size:12px !important;
+}
+.zaloQrBtn{
+  background:#0068ff !important;
+  color:#fff !important;
+  border-color:#0050c8 !important;
+}
+.qrGuideSection{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  background:#fff;
+  border:1px solid rgba(199,154,66,.35);
+  border-radius:18px;
+  padding:16px;
+}
+.guideTabsHeader b{
+  display:block;
+  color:var(--son);
+  font-size:13.5px;
+  margin-bottom:8px;
+}
+.guideTabs{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.gTab{
+  background:rgba(199,154,66,.08);
+  border:1px solid rgba(199,154,66,.3);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:700;
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:all .15s ease;
+}
+.gTab:hover{
+  background:rgba(143,31,22,.08);
+  color:var(--son);
+}
+.gTab.active{
+  background:var(--son);
+  color:#fff;
+  border-color:var(--son);
+}
+.guideStepList{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--ink);
+  padding-top:6px;
+}
+.gStep b{
+  color:var(--wood);
+}
+.gResult{
+  background:#ecfdf5;
+  border:1px dashed #6ee7b7;
+  border-radius:10px;
+  padding:10px 12px;
+  font-size:12.5px;
+  color:#065f46;
+  line-height:1.5;
+}
+
+/* Nút kích hoạt trên thanh công cụ & giao diện */
+.headerQrBtn{
+  background:linear-gradient(180deg,#fff8e7,#faedd0) !important;
+  border-color:var(--gold) !important;
+  color:var(--son) !important;
+  font-weight:700 !important;
+}
+.qrSidebarNavBtn{
+  color:#be123c !important;
+  font-weight:700;
+}
+.qrPillBtn{
+  background:rgba(225,29,72,.1) !important;
+  border-color:rgba(225,29,72,.3) !important;
+  color:#be123c !important;
+  font-weight:700 !important;
+}
+.footerQrActionBtn{
+  color:var(--son) !important;
+  font-weight:700;
+}
+
+
 
 
 

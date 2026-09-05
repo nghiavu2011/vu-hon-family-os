@@ -1,4 +1,4 @@
-export default function Footer({ onOpenSources, onOpenPrivacy }) {
+export default function Footer({ onOpenSources, onOpenPrivacy, onOpenQr }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -41,7 +41,7 @@ export default function Footer({ onOpenSources, onOpenPrivacy }) {
             <ul className="footerLinks">
               <li><a href="#tree">🌳 Cây Gia phả Tương tác</a></li>
               <li><a href="#kinship">🧭 Bộ Tra cứu Xưng hô Họ tộc</a></li>
-              <li><a href="#events">📜 Lịch Giỗ Tổ & Văn khấn Nôm</a></li>
+              <li><a href="#events">📜 Lịch Giỗ Tổ & Văn khấn cúng Giỗ</a></li>
               <li><a href="#grave-map">🪦 Định vị Lăng mộ & Tọa độ GPS</a></li>
               <li><a href="#people">📖 Danh bạ Thành viên Toàn họ</a></li>
               <li>
@@ -54,6 +54,13 @@ export default function Footer({ onOpenSources, onOpenPrivacy }) {
                   🔒 Chính sách riêng tư nội tộc
                 </button>
               </li>
+              {onOpenQr && (
+                <li>
+                  <button type="button" className="footerTextActionBtn footerQrActionBtn" onClick={onOpenQr}>
+                    📱 Mã QR Truy Cập & Cài App
+                  </button>
+                </li>
+              )}
               <li><a href="#analytics">📊 Thống kê Truy cập Realtime</a></li>
             </ul>
           </div>

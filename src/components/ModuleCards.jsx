@@ -26,7 +26,7 @@ export default function ModuleCards({ onOpenSources }) {
     },
     {
       title: 'Tư liệu & Văn bia',
-      text: 'Bản phả Nôm gốc, thần tích Mộ Trạch và văn bia.',
+      text: 'Bản scan sổ phả chép tay gia tộc và tư liệu lịch sử dòng họ.',
       image: '/assets/feature-memory.png',
       onClick: onOpenSources,
     },

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function QuickNavPills({ onOpenSources, onOpenPrivacy }) {
+export default function QuickNavPills({ onOpenSources, onOpenPrivacy, onOpenQr }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -64,6 +64,16 @@ export default function QuickNavPills({ onOpenSources, onOpenPrivacy }) {
             <button type="button" className="quickNavBtn modalBtn" onClick={onOpenPrivacy} title="Xem Chính sách riêng tư nội tộc">
               🔒 Quyền Riêng Tư
             </button>
+            {onOpenQr && (
+              <button
+                type="button"
+                className="quickNavBtn modalBtn qrPillBtn"
+                onClick={onOpenQr}
+                title="Mã QR quét vào web & cài ứng dụng trên điện thoại"
+              >
+                📱 Quét QR Cài App
+              </button>
+            )}
           </div>
         </div>
       </nav>

@@ -78,14 +78,14 @@ Nam mô A Di Đà Phật! (3 lần, 3 lạy)`;
         {showPrayer && (
           <div className="prayerModalBox">
             <div className="prayerHeader">
-              <h3>📜 Văn khấn Nôm cúng Giỗ Tiên Tổ Họ Vũ Cổ Truyền</h3>
+              <h3>📜 Văn khấn cúng Giỗ Tiên Tổ Họ Vũ Cổ Truyền</h3>
               <button className="btn smallBtn" onClick={handleCopyPrayer} type="button">
                 {copied ? '✅ Đã sao chép văn khấn!' : '📋 Sao chép bài khấn'}
               </button>
             </div>
             <pre className="prayerText">{prayerContent}</pre>
             <p className="prayerNote">
-              💡 <i>Văn khấn lưu truyền theo chuẩn nghi lễ thờ cúng gia tiên họ Vũ làng Mộ Trạch (Hải Dương).</i>
+              💡 <i>Văn khấn phụng tự gia tiên lưu truyền theo nghi thức cổ truyền của người Việt.</i>
             </p>
           </div>
         )}

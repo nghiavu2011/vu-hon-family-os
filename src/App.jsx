@@ -25,6 +25,7 @@ import ContributionModal from './components/ContributionModal.jsx';
 import FamilyAiChatModal from './components/FamilyAiChatModal.jsx';
 import SourceNotesModal from './components/SourceNotesModal.jsx';
 import PrivacyModal from './components/PrivacyModal.jsx';
+import WebsiteQrModal from './components/WebsiteQrModal.jsx';
 import PwaInstallBanner from './components/PwaInstallBanner.jsx';
 import Footer from './components/Footer.jsx';
 import AdminDashboard from './components/AdminDashboard.jsx';
@@ -55,6 +56,7 @@ function FamilyOsApp() {
   const [showAiModal, setShowAiModal] = useState(false);
   const [showSourceNotesModal, setShowSourceNotesModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [showQrModal, setShowQrModal] = useState(false);
 
   useEffect(() => {
     if (seniorMode) {
@@ -144,6 +146,7 @@ function FamilyOsApp() {
         onOpenAi={() => setShowAiModal(true)}
         onOpenSources={() => setShowSourceNotesModal(true)}
         onOpenPrivacy={() => setShowPrivacyModal(true)}
+        onOpenQr={() => setShowQrModal(true)}
       />
 
       {showAdmin ? <AuthPanel branches={branches} privacySummary={privacySummary} /> : null}
@@ -155,6 +158,7 @@ function FamilyOsApp() {
       <QuickNavPills
         onOpenSources={() => setShowSourceNotesModal(true)}
         onOpenPrivacy={() => setShowPrivacyModal(true)}
+        onOpenQr={() => setShowQrModal(true)}
       />
 
       {/* Trục Truyền Thừa Đa Phân Chi */}
@@ -207,6 +211,7 @@ function FamilyOsApp() {
       <Footer
         onOpenSources={() => setShowSourceNotesModal(true)}
         onOpenPrivacy={() => setShowPrivacyModal(true)}
+        onOpenQr={() => setShowQrModal(true)}
       />
 
       {/* Nút Zalo / Hotline & Cụ Đồ Ảo AI nổi cạnh màn hình */}
@@ -257,6 +262,13 @@ function FamilyOsApp() {
       {showPrivacyModal && (
         <PrivacyModal
           onClose={() => setShowPrivacyModal(false)}
+        />
+      )}
+
+      {/* Modal Mã QR Truy Cập Toàn Năng & Hướng Dẫn Cài App */}
+      {showQrModal && (
+        <WebsiteQrModal
+          onClose={() => setShowQrModal(false)}
         />
       )}
     </>
