@@ -60,6 +60,7 @@
     "personId": "nguyen-van-son",
     "dateLunar": "17-07",
     "branch": "Chi Vũ Thành",
+    "isMaternal": true,
     "note": "Nhạc phụ anh Vũ Trọng Nghĩa, thân phụ chị Nguyễn Sao Mai (con một duy nhất). Sinh 1951, tạ thế 29/08/2026 (17/7 Bính Ngọ). An táng tại Xã Lý Nhân, Ninh Bình. Đời 6 lưu truyền cho đời 7 ghi nhớ phụng dưỡng."
   },
   {
@@ -67,6 +68,7 @@
     "personId": "nguyen-thi-kim-lien",
     "dateLunar": "25-12",
     "branch": "Chi Vũ Thành",
+    "isMaternal": true,
     "note": "Nhạc mẫu anh Vũ Trọng Nghĩa, thân mẫu chị Nguyễn Sao Mai (con một duy nhất). Tạ thế 05/02/2013 (25/12 Nhâm Thìn). An táng tại quê chồng Xã Lý Nhân, Ninh Bình. Đời 6 lưu truyền cho đời 7 ghi nhớ phụng dưỡng."
   }
 ]

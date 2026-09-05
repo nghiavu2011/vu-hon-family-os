@@ -5,6 +5,7 @@ import DeathAnniversaryReminderModal from './DeathAnniversaryReminderModal.jsx';
 export default function EventList({ events }) {
   const [showPrayer, setShowPrayer] = useState(false);
   const [showReminderModal, setShowReminderModal] = useState(false);
+  const [showMaternalEvents, setShowMaternalEvents] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const sorted = [...events].sort((a, b) => {
@@ -12,6 +13,14 @@ export default function EventList({ events }) {
     const [db, mb] = b.dateLunar.split('-').map(Number);
     return ma - mb || da - db;
   });
+
+  // Tách riêng sự kiện giỗ dòng họ và kỵ nhật bên ngoại (dành riêng đời 6-7)
+  const clanEvents = sorted.filter(
+    (e) => !e.isMaternal && e.personId !== 'nguyen-van-son' && e.personId !== 'nguyen-thi-kim-lien'
+  );
+  const maternalEvents = sorted.filter(
+    (e) => e.isMaternal || e.personId === 'nguyen-van-son' || e.personId === 'nguyen-thi-kim-lien'
+  );
 
   const prayerContent = `Nam mô A Di Đà Phật! (3 lần, 3 lạy)
 
@@ -81,7 +90,8 @@ Nam mô A Di Đà Phật! (3 lần, 3 lạy)`;
           </div>
         )}
 
-        {sorted.map((event) => (
+        {/* Danh sách Kỵ nhật chính thức của Dòng họ */}
+        {clanEvents.map((event) => (
           <div className="eventItem" key={`${event.personId}-${event.dateLunar}`}>
             <div className="eventDate">{formatLunar(event.dateLunar)}</div>
             <div className="eventDetails">
@@ -94,6 +104,52 @@ Nam mô A Di Đà Phật! (3 lần, 3 lạy)`;
             <img src="/assets/incense-altar.png" alt="" />
           </div>
         ))}
+
+        {/* Khối Kỵ nhật Bên Ngoại (Ẩn mặc định, có nút xổ khéo léo dành riêng cho đời 6-7 Nghĩa & Nguyên) */}
+        {maternalEvents.length > 0 && (
+          <div className="maternalCollapseSection">
+            <button
+              type="button"
+              className={`maternalToggleRowBtn ${showMaternalEvents ? 'expanded' : ''}`}
+              onClick={() => setShowMaternalEvents(!showMaternalEvents)}
+              title="Nhấp để mở hoặc ẩn ngày giỗ bên ngoại dành cho đời 6-7"
+            >
+              <div className="maternalToggleLeft">
+                <span className="maternalIcon">🌸</span>
+                <div>
+                  <b>Kỵ Nhật Bên Ngoại ({maternalEvents.length} ngày giỗ)</b>
+                  <span className="maternalHint">Phụng tự lưu truyền cho con cháu đời 6 & 7 Chi Vũ Thành</span>
+                </div>
+              </div>
+              <div className="maternalToggleRight">
+                <span className="toggleStatePill">
+                  {showMaternalEvents ? '▲ Ẩn bớt' : '▼ Bấm mở xem'}
+                </span>
+              </div>
+            </button>
+
+            {showMaternalEvents && (
+              <div className="maternalEventWrapper">
+                <div className="maternalNotice">
+                  <i>💡 <b>Ghi chú phụng tự:</b> Ngày giỗ của Ông ngoại Nguyễn Văn Sơn (17/7 Âm) và Bà ngoại Nguyễn Thị Kim Liên (25/12 Âm) phục vụ hiển thị riêng cho con cháu đời 6-7 (gia đình anh Vũ Trọng Nghĩa và các cháu Vũ Bảo Nguyên, Vũ Nhật Minh) ghi nhớ đạo hiếu trọn vẹn.</i>
+                </div>
+                {maternalEvents.map((event) => (
+                  <div className="eventItem maternalItemHighlight" key={`${event.personId}-${event.dateLunar}`}>
+                    <div className="eventDate maternalDate">{formatLunar(event.dateLunar)}</div>
+                    <div className="eventDetails">
+                      <b>{event.title}</b>
+                      <div className="sub">
+                        <span className="eventBranchBadge maternalBadge">Bên Ngoại · Chi Vũ Thành</span>
+                        {event.note ? <span className="eventNoteText"> · {event.note}</span> : null}
+                      </div>
+                    </div>
+                    <img src="/assets/incense-altar.png" alt="" />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="panel pad" id="connect">

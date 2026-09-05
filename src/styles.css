@@ -4232,6 +4232,101 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
   line-height:1.5;
 }
 
+/* ==========================================================================
+   Khối Ẩn/Hiện Kỵ Nhật Bên Ngoại (Đời 6-7 Nghĩa & Nguyên Phụng Tự)
+   ========================================================================== */
+.maternalCollapseSection{
+  margin-top:16px;
+  border-top:1px dashed rgba(199,154,66,.45);
+  padding-top:14px;
+}
+.maternalToggleRowBtn{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 16px;
+  border-radius:16px;
+  border:1px solid rgba(225,29,72,.25);
+  background:linear-gradient(90deg,rgba(255,241,242,.75),rgba(255,247,237,.85));
+  cursor:pointer;
+  transition:all .2s ease;
+  text-align:left;
+}
+.maternalToggleRowBtn:hover{
+  border-color:rgba(225,29,72,.5);
+  background:linear-gradient(90deg,rgba(255,228,230,.9),rgba(254,242,242,.95));
+  transform:translateY(-1px);
+}
+.maternalToggleRowBtn.expanded{
+  border-color:rgba(225,29,72,.45);
+  background:linear-gradient(90deg,rgba(255,228,230,.85),rgba(255,247,237,.9));
+}
+.maternalToggleLeft{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.maternalIcon{
+  font-size:20px;
+  line-height:1;
+}
+.maternalToggleLeft b{
+  display:block;
+  color:#9f1239;
+  font-size:14px;
+}
+.maternalHint{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:2px;
+}
+.toggleStatePill{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid rgba(225,29,72,.3);
+  color:#be123c;
+  box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+.maternalEventWrapper{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  animation:fadeIn .25s ease;
+}
+.maternalNotice{
+  background:rgba(255,241,242,.65);
+  border:1px dashed rgba(225,29,72,.3);
+  border-radius:12px;
+  padding:10px 14px;
+  font-size:12.5px;
+  color:#881337;
+  line-height:1.55;
+}
+.maternalItemHighlight{
+  border-color:rgba(225,29,72,.28) !important;
+  background:rgba(255,241,242,.45) !important;
+}
+.maternalItemHighlight:hover{
+  border-color:rgba(225,29,72,.5) !important;
+  background:rgba(255,241,242,.75) !important;
+}
+.maternalDate{
+  color:#be123c !important;
+  font-weight:700;
+}
+.maternalBadge{
+  background:#ffe4e6 !important;
+  color:#9f1239 !important;
+  border:1px solid #fecdd3 !important;
+}
+
 
 
 
