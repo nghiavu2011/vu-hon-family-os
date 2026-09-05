@@ -4511,6 +4511,253 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
   font-weight:700;
 }
 
+/* ==========================================================================
+   TỐI ƯU HÓA TOÀN DIỆN CHO SMARTPHONE (iOS / ANDROID) & IPAD / TABLET
+   ========================================================================== */
+
+/* 1. Thanh điều hướng di động (MobileBottomNav) - Hiện trên màn hình <= 820px */
+.mobileBottomNav{
+  display:none;
+}
+
+@media(max-width:820px){
+  .mobileBottomNav{
+    display:block;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:220;
+    background:rgba(43,19,10,.95);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-top:1.5px solid var(--gold);
+    box-shadow:0 -6px 25px rgba(0,0,0,.4);
+    padding-bottom:env(safe-area-inset-bottom, 6px);
+  }
+  .mobileBottomNavInner{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    align-items:center;
+    height:58px;
+    max-width:500px;
+    margin:0 auto;
+  }
+  .mbNavItem{
+    background:none;
+    border:none;
+    color:rgba(255,247,230,.75);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    cursor:pointer;
+    padding:6px 2px;
+    transition:all .15s ease;
+    text-decoration:none;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .mbNavItem .mbIcon{
+    font-size:18px;
+    line-height:1;
+    transition:transform .15s ease;
+  }
+  .mbNavItem .mbLabel{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.2px;
+  }
+  .mbNavItem:active .mbIcon{
+    transform:scale(1.2);
+  }
+  .mbNavItem.active{
+    color:#ffe6a3;
+  }
+  .mbNavItem.active .mbIcon{
+    transform:scale(1.15);
+    filter:drop-shadow(0 0 6px rgba(255,230,163,.6));
+  }
+  .mbNavItem.active .mbLabel{
+    color:#ffe6a3;
+    font-weight:900;
+  }
+  .mbMenuBtn{
+    color:#ffd57e;
+  }
+
+  /* Đẩy các nút nổi (Zalo + Thống kê realtime) lên trên thanh Bottom Nav để không bị đè */
+  .floatingContactWrapper{
+    bottom:76px !important;
+    right:12px !important;
+  }
+  .realtimeFloatingWidget{
+    bottom:132px !important;
+    right:12px !important;
+  }
+
+  /* Thêm khoảng trống đáy trang để footer không bị che bởi Bottom Nav */
+  body{
+    padding-bottom:calc(64px + env(safe-area-inset-bottom, 6px));
+  }
+}
+
+/* 2. Tinh chỉnh Header cho Smartphone (<= 768px) */
+@media(max-width:768px){
+  .siteHeader{
+    min-height:58px;
+  }
+  .nav{
+    min-height:58px;
+    gap:10px;
+  }
+  .brand{
+    gap:8px;
+  }
+  .brandSeal{
+    width:38px;
+    height:38px;
+  }
+  .brandMainTitle{
+    font-size:15px;
+    letter-spacing:.4px;
+  }
+  .brandSubTitle{
+    font-size:10px;
+  }
+  /* Ẩn bớt các nút rườm rà trên thanh Header sticky để không tràn dòng */
+  .headerQuickActions .headerZaloBtn,
+  .headerQuickActions .contributionBtn,
+  .headerQuickActions .utilityBtn:not(.headerQrBtn):not(.headerAiBtn){
+    display:none !important;
+  }
+  .headerQuickActions{
+    gap:6px;
+  }
+  .headerQrBtn,
+  .headerAiBtn{
+    padding:7px 10px !important;
+    font-size:12px !important;
+  }
+  .menuTriggerBtn{
+    padding:8px 12px;
+    font-size:13px;
+    gap:5px;
+  }
+  .menuTriggerText{
+    display:inline;
+  }
+}
+
+@media(max-width:480px){
+  .brandSubTitle{
+    display:none; /* Trên màn hình cực nhỏ (360px) chỉ hiện tên thương hiệu để giữ header 1 dòng */
+  }
+  .menuTriggerText{
+    display:none; /* Chỉ hiện biểu tượng ☰ trên màn hình nhỏ */
+  }
+  .menuTriggerBtn{
+    padding:8px 10px;
+  }
+}
+
+/* 3. Tinh chỉnh Cây Phả Hệ (Family Tree) cho Smartphone & iPad */
+@media(max-width:820px){
+  .flowPanel{
+    height:560px;
+    min-height:480px;
+    margin:0 6px;
+    border-radius:20px;
+  }
+  .flowToolbar{
+    max-width:calc(100vw - 32px);
+    padding:8px 10px;
+    gap:6px;
+    border-radius:14px;
+  }
+  .treeSearchInput{
+    width:100% !important;
+    font-size:16px !important; /* Chống auto-zoom trên iOS Safari */
+  }
+  .treeBranchSelect{
+    width:100% !important;
+    font-size:16px !important;
+  }
+  .quickBranchPills{
+    width:100%;
+    margin-left:0;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:4px;
+  }
+  .branchPill{
+    white-space:nowrap;
+    flex-shrink:0;
+    padding:5px 10px;
+    font-size:11.5px;
+  }
+}
+
+/* 4. Tinh chỉnh iPad / Tablet (768px - 1024px) */
+@media(min-width:769px) and (max-width:1024px){
+  .flowPanel{
+    height:660px;
+    margin:0 12px;
+  }
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .moduleGrid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .graveMapShell{
+    grid-template-columns:1fr;
+  }
+  .networkShell,
+  .mentorShell{
+    grid-template-columns:1fr;
+  }
+}
+
+/* 5. Chống zoom-in tự động trên iOS Safari cho mọi ô nhập liệu */
+@media(max-width:768px){
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="search"],
+  select,
+  textarea{
+    font-size:16px !important;
+  }
+}
+
+/* 6. Tối ưu hóa các Modal Dialog trên Smartphone */
+@media(max-width:680px){
+  .modalCard{
+    max-height:86vh !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch !important;
+    padding:18px 14px !important;
+    border-radius:20px !important;
+  }
+  .websiteQrBody{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+  .qrDisplayFrame{
+    padding:12px !important;
+  }
+  .qrMainImg{
+    width:180px !important;
+    height:180px !important;
+  }
+  .formRow{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
 
 
 

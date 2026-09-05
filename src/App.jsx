@@ -26,6 +26,7 @@ import FamilyAiChatModal from './components/FamilyAiChatModal.jsx';
 import SourceNotesModal from './components/SourceNotesModal.jsx';
 import PrivacyModal from './components/PrivacyModal.jsx';
 import WebsiteQrModal from './components/WebsiteQrModal.jsx';
+import MobileBottomNav from './components/MobileBottomNav.jsx';
 import PwaInstallBanner from './components/PwaInstallBanner.jsx';
 import Footer from './components/Footer.jsx';
 import AdminDashboard from './components/AdminDashboard.jsx';
@@ -57,6 +58,7 @@ function FamilyOsApp() {
   const [showSourceNotesModal, setShowSourceNotesModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showQrModal, setShowQrModal] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     if (seniorMode) {
@@ -147,6 +149,8 @@ function FamilyOsApp() {
         onOpenSources={() => setShowSourceNotesModal(true)}
         onOpenPrivacy={() => setShowPrivacyModal(true)}
         onOpenQr={() => setShowQrModal(true)}
+        sidebarOpen={sidebarOpen}
+        onToggleSidebar={setSidebarOpen}
       />
 
       {showAdmin ? <AuthPanel branches={branches} privacySummary={privacySummary} /> : null}
@@ -271,6 +275,9 @@ function FamilyOsApp() {
           onClose={() => setShowQrModal(false)}
         />
       )}
+
+      {/* Thanh Điều Hướng Ứng Dụng Di Động Thông Minh Cho Smartphone & Tablet */}
+      <MobileBottomNav onOpenMenu={() => setSidebarOpen(true)} />
     </>
   );
 }

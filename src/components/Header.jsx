@@ -15,9 +15,13 @@ export default function Header({
   onOpenSources,
   onOpenPrivacy,
   onOpenQr,
+  sidebarOpen: controlledSidebarOpen,
+  onToggleSidebar,
 }) {
   const auth = useAuth();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [internalSidebarOpen, setInternalSidebarOpen] = useState(false);
+  const sidebarOpen = controlledSidebarOpen !== undefined ? controlledSidebarOpen : internalSidebarOpen;
+  const setSidebarOpen = onToggleSidebar || setInternalSidebarOpen;
   const role = auth?.role || 'public';
   const showAdmin = canSeeAdmin(role);
 
