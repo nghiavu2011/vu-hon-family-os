@@ -373,18 +373,18 @@
   },
   {
     "id": "vu-dien-mien",
-    "name": "Vũ Điền",
+    "name": "Vũ Điện",
     "gender": "male",
     "aka": [
-      "Miền",
-      "Vũ Điền tức Miền"
+      "Vũ Miện",
+      "Miện"
     ],
     "gen": 4,
-    "branch": "Chi Vũ Ngọc Điền",
+    "branch": "Chi Vũ Điện",
     "fatherId": "vu-ngoc-dien",
     "motherId": "nguyen-thi-he",
     "spouseIds": [
-      "nguyen-thi-cuc"
+      "nguyen-thi-thu"
     ],
     "childrenIds": [
       "vu-viet-hong-duc-mung"
@@ -393,17 +393,17 @@
     "deathYear": 1984,
     "lunarDeath": "17-12",
     "place": "Hà Nội",
-    "note": "Sinh 1917, thọ 67 tuổi, mất 17/12 âm lịch năm 1984 tại Hà Nội.",
+    "note": "Sinh 1917, thọ 67 tuổi, mất 17/12 âm lịch năm 1984 tại Hà Nội (tên gọi khác là Vũ Miện).",
     "confidence": "high",
     "privacy": "public",
     "source": "PDF trang 29"
   },
   {
-    "id": "nguyen-thi-cuc",
-    "name": "Nguyễn Thị Cúc",
+    "id": "nguyen-thi-thu",
+    "name": "Nguyễn Thị Thư",
     "gender": "female",
     "gen": 4,
-    "branch": "Chi Vũ Ngọc Điền",
+    "branch": "Chi Vũ Điện",
     "spouseIds": [
       "vu-dien-mien"
     ],
@@ -412,8 +412,8 @@
     ],
     "birthYear": 1918,
     "lunarDeath": "24-11",
-    "place": "Làng Vũ, huyện Cẩm Giàng, Hải Dương",
-    "note": "Quê làng Vũ, huyện Cẩm Giàng, Hải Dương; sinh 1918, thọ 57 tuổi, mất 24/11 âm lịch tại Hà Nội.",
+    "place": "Làng Vó, huyện Cẩm Giàng, Hải Dương",
+    "note": "Quê làng Vó, huyện Cẩm Giàng, Hải Dương; sinh 1918, thọ 57 tuổi, mất 24/11 âm lịch tại Hà Nội.",
     "confidence": "high",
     "privacy": "public",
     "source": "PDF trang 29"
@@ -423,12 +423,12 @@
     "name": "Vũ Việt Hồng",
     "gender": "male",
     "aka": [
-      "Vũ Đức Mừng"
+      "Vũ Đức Năng"
     ],
     "gen": 5,
-    "branch": "Chi Vũ Ngọc Điền",
+    "branch": "Chi Vũ Điện",
     "fatherId": "vu-dien-mien",
-    "motherId": "nguyen-thi-cuc",
+    "motherId": "nguyen-thi-thu",
     "spouseIds": [
       "phung-thi-thanh-ha"
     ],
@@ -436,9 +436,9 @@
       "vu-quang",
       "vu-thi-hong-hanh"
     ],
-    "birthDate": "1945-10-01",
+    "birthDate": "1946-07-05",
     "place": "Hà Nội",
-    "note": "Sinh 01/10/1945 tại Hà Nội.",
+    "note": "Sinh 05/07/1946 tại Hà Nội (tức Vũ Đức Năng).",
     "confidence": "high",
     "privacy": "family",
     "source": "PDF trang 30"
@@ -448,7 +448,7 @@
     "name": "Phùng Thị Thanh Hà",
     "gender": "female",
     "gen": 5,
-    "branch": "Chi Vũ Ngọc Điền",
+    "branch": "Chi Vũ Điện",
     "spouseIds": [
       "vu-viet-hong-duc-mung"
     ],
@@ -456,9 +456,9 @@
       "vu-quang",
       "vu-thi-hong-hanh"
     ],
-    "birthDate": "1959-10-01",
+    "birthDate": "1957-01-20",
     "place": "Hà Nội",
-    "note": "Quê Hà Nội, sinh 01/10/1959.",
+    "note": "Quê Hà Nội, sinh 20/01/1957.",
     "confidence": "high",
     "privacy": "family",
     "source": "PDF trang 30"
@@ -468,30 +468,134 @@
     "name": "Vũ Quang",
     "gender": "male",
     "gen": 6,
-    "branch": "Chi Vũ Ngọc Điền",
+    "branch": "Chi Vũ Điện",
     "fatherId": "vu-viet-hong-duc-mung",
     "motherId": "phung-thi-thanh-ha",
-    "childrenIds": [],
+    "childrenIds": [
+      "vu-quang-minh",
+      "vu-hong-phuc"
+    ],
     "birthDate": "1977-10-06",
     "note": "Sinh 06/10/1977.",
     "confidence": "high",
     "privacy": "family",
-    "source": "PDF trang 30"
+    "source": "PDF trang 30",
+    "spouseIds": [
+      "pham-thi-tam-thanh"
+    ]
   },
   {
     "id": "vu-thi-hong-hanh",
     "name": "Vũ Thị Hồng Hạnh",
     "gender": "female",
     "gen": 6,
-    "branch": "Chi Vũ Ngọc Điền",
+    "branch": "Chi Vũ Điện",
     "fatherId": "vu-viet-hong-duc-mung",
     "motherId": "phung-thi-thanh-ha",
-    "childrenIds": [],
+    "childrenIds": [
+      "vu-thanh-trang",
+      "nguyen-vu-thanh-thuy"
+    ],
     "birthDate": "1979-11-13",
     "note": "Sinh 13/11/1979.",
     "confidence": "high",
     "privacy": "family",
-    "source": "PDF trang 30"
+    "source": "PDF trang 30",
+    "spouseIds": [
+      "nguyen-chi-thanh"
+    ]
+  },
+  {
+    "id": "pham-thi-tam-thanh",
+    "name": "Phạm Thị Tâm Thanh",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Điện",
+    "spouseIds": [
+      "vu-quang"
+    ],
+    "childrenIds": [
+      "vu-quang-minh",
+      "vu-hong-phuc"
+    ],
+    "birthDate": "1980-02-20",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Gia đình cung cấp"
+  },
+  {
+    "id": "vu-quang-minh",
+    "name": "Vũ Quang Minh",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Điện",
+    "fatherId": "vu-quang",
+    "motherId": "pham-thi-tam-thanh",
+    "childrenIds": [],
+    "birthDate": "2006-03-22",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Gia đình cung cấp"
+  },
+  {
+    "id": "vu-hong-phuc",
+    "name": "Vũ Hồng Phúc",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Điện",
+    "fatherId": "vu-quang",
+    "motherId": "pham-thi-tam-thanh",
+    "childrenIds": [],
+    "birthDate": "2019-09-21",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Gia đình cung cấp"
+  },
+  {
+    "id": "nguyen-chi-thanh",
+    "name": "Nguyễn Chí Thanh",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Điện",
+    "spouseIds": [
+      "vu-thi-hong-hanh"
+    ],
+    "childrenIds": [
+      "vu-thanh-trang",
+      "nguyen-vu-thanh-thuy"
+    ],
+    "birthDate": "1974-05-01",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Gia đình cung cấp"
+  },
+  {
+    "id": "vu-thanh-trang",
+    "name": "Vũ Thanh Trang",
+    "gender": "female",
+    "gen": 7,
+    "branch": "Chi Vũ Điện",
+    "fatherId": "nguyen-chi-thanh",
+    "motherId": "vu-thi-hong-hanh",
+    "childrenIds": [],
+    "birthDate": "2003-08-05",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Gia đình cung cấp"
+  },
+  {
+    "id": "nguyen-vu-thanh-thuy",
+    "name": "Nguyễn Vũ Thanh Thủy",
+    "gender": "female",
+    "gen": 7,
+    "branch": "Chi Vũ Điện",
+    "fatherId": "nguyen-chi-thanh",
+    "motherId": "vu-thi-hong-hanh",
+    "childrenIds": [],
+    "birthDate": "2012-03-19",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Gia đình cung cấp"
   },
   {
     "id": "vu-thanh",

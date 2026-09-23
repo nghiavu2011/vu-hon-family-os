@@ -18,16 +18,17 @@ const BRANCH_LINEAGES = [
   },
   {
     id: 'vu-dien',
-    name: '🏛 Chi Vũ Điền (6 Đời)',
-    badge: 'Chi Nhánh Tiêu Biểu · 6 Thế Hệ',
+    name: '🏛 Chi Vũ Điện (7 Đời)',
+    badge: 'Chi Nhánh Tiêu Biểu · 7 Thế Hệ',
     desc: 'Nhánh phả hệ con cháu định cư và lập nghiệp qua nhiều thế hệ tại Hà Nội.',
     nodes: [
       { name: 'Vũ Bá Oanh', gen: 'Thủy tổ', years: 'Khởi đầu ngành' },
       { name: 'Vũ Văn Rũi', gen: 'Đời 2', years: 'Cụ thôn Rũi (Bà Nguyễn Thị Nhài)' },
       { name: 'Vũ Ngọc Điền', gen: 'Đời 3', years: '1887 – 1960' },
-      { name: 'Vũ Điền', gen: 'Đời 4', years: '1917 – 1984' },
-      { name: 'Vũ Việt Hồng', gen: 'Đời 5', years: 'Sinh 1945' },
+      { name: 'Vũ Điện (tức Vũ Miện)', gen: 'Đời 4', years: '1917 – 1984' },
+      { name: 'Vũ Việt Hồng (Vũ Đức Năng)', gen: 'Đời 5', years: 'Sinh 1946' },
       { name: 'Vũ Quang & Vũ Thị Hồng Hạnh', gen: 'Đời 6', years: '1977 · 1979' },
+      { name: 'Quang Minh · Hồng Phúc · Thanh Trang · Thanh Thủy', gen: 'Đời 7', years: '2003 – 2019' },
     ],
   },
   {

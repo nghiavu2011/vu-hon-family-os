@@ -168,7 +168,7 @@ export default function GraveMap({
                   </div>
                   <div className="sgItem">
                     <span className="sgLabel">🌿 Thế thứ nối đời:</span>
-                    <b className="sgVal">Thân phụ Cụ Vũ Thành & Cụ Vũ Điền</b>
+                    <b className="sgVal">Thân phụ Cụ Vũ Thành & Cụ Vũ Điện</b>
                   </div>
                 </div>
 
