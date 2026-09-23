@@ -373,14 +373,15 @@
   },
   {
     "id": "vu-dien-mien",
-    "name": "Vũ Điện",
+    "name": "Vũ Điền",
     "gender": "male",
     "aka": [
       "Vũ Miện",
-      "Miện"
+      "Miện",
+      "Vũ Điền tức Miện"
     ],
     "gen": 4,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "vu-ngoc-dien",
     "motherId": "nguyen-thi-he",
     "spouseIds": [
@@ -403,7 +404,7 @@
     "name": "Nguyễn Thị Thư",
     "gender": "female",
     "gen": 4,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "spouseIds": [
       "vu-dien-mien"
     ],
@@ -426,7 +427,7 @@
       "Vũ Đức Năng"
     ],
     "gen": 5,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "vu-dien-mien",
     "motherId": "nguyen-thi-thu",
     "spouseIds": [
@@ -448,7 +449,7 @@
     "name": "Phùng Thị Thanh Hà",
     "gender": "female",
     "gen": 5,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "spouseIds": [
       "vu-viet-hong-duc-mung"
     ],
@@ -468,7 +469,7 @@
     "name": "Vũ Quang",
     "gender": "male",
     "gen": 6,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "vu-viet-hong-duc-mung",
     "motherId": "phung-thi-thanh-ha",
     "childrenIds": [
@@ -486,10 +487,10 @@
   },
   {
     "id": "vu-thi-hong-hanh",
-    "name": "Vũ Thị Hồng Hạnh",
+    "name": "Vũ Hồng Hạnh",
     "gender": "female",
     "gen": 6,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "vu-viet-hong-duc-mung",
     "motherId": "phung-thi-thanh-ha",
     "childrenIds": [
@@ -510,7 +511,7 @@
     "name": "Phạm Thị Tâm Thanh",
     "gender": "female",
     "gen": 6,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "spouseIds": [
       "vu-quang"
     ],
@@ -528,7 +529,7 @@
     "name": "Vũ Quang Minh",
     "gender": "male",
     "gen": 7,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "vu-quang",
     "motherId": "pham-thi-tam-thanh",
     "childrenIds": [],
@@ -542,7 +543,7 @@
     "name": "Vũ Hồng Phúc",
     "gender": "male",
     "gen": 7,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "vu-quang",
     "motherId": "pham-thi-tam-thanh",
     "childrenIds": [],
@@ -556,7 +557,7 @@
     "name": "Nguyễn Chí Thanh",
     "gender": "male",
     "gen": 6,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "spouseIds": [
       "vu-thi-hong-hanh"
     ],
@@ -571,10 +572,10 @@
   },
   {
     "id": "vu-thanh-trang",
-    "name": "Vũ Thanh Trang",
+    "name": "Nguyễn Vũ Thanh Trang",
     "gender": "female",
     "gen": 7,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "nguyen-chi-thanh",
     "motherId": "vu-thi-hong-hanh",
     "childrenIds": [],
@@ -588,7 +589,7 @@
     "name": "Nguyễn Vũ Thanh Thủy",
     "gender": "female",
     "gen": 7,
-    "branch": "Chi Vũ Điện",
+    "branch": "Chi Vũ Điền",
     "fatherId": "nguyen-chi-thanh",
     "motherId": "vu-thi-hong-hanh",
     "childrenIds": [],

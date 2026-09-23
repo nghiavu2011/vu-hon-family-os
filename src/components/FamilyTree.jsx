@@ -116,10 +116,10 @@ function FamilyTreeInner({ people, onSelect }) {
               </button>
               <button
                 type="button"
-                className={`branchPill ${branch === 'Chi Vũ Điện' ? 'active' : ''}`}
-                onClick={() => { setBranch('Chi Vũ Điện'); handleFit(); }}
+                className={`branchPill ${branch === 'Chi Vũ Điền' ? 'active' : ''}`}
+                onClick={() => { setBranch('Chi Vũ Điền'); handleFit(); }}
               >
-                Chi Vũ Điện (7 đời)
+                Chi Vũ Điền (7 đời)
               </button>
             </div>
           </Panel>

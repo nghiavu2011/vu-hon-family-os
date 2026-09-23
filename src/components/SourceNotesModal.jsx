@@ -15,15 +15,15 @@ const notes = [
   },
   {
     page: 'Trang 29',
-    title: 'Đời thứ 3 & thứ 4 (Chi Vũ Điện)',
-    text: 'Cụ Vũ Ngọc Điền, cụ bà Nguyễn Thị Hè, ông Vũ Điện tức Miện, bà Nguyễn Thị Thư.',
+    title: 'Đời thứ 3 & thứ 4 (Chi Vũ Điền)',
+    text: 'Cụ Vũ Ngọc Điền, cụ bà Nguyễn Thị Hè, ông Vũ Điền tức Miện, bà Nguyễn Thị Thư.',
     note: 'Trích từ bản scan trang 29 sổ phả chép tay gia tộc.',
     image: '/assets/sources/trang-29.png',
   },
   {
     page: 'Trang 30',
     title: 'Đời thứ 5 & thứ 6 (Kế nghiệp Hà Nội)',
-    text: 'Vũ Việt Hồng tức Vũ Đức Năng, Phùng Thị Thanh Hà, Vũ Quang, Vũ Thị Hồng Hạnh.',
+    text: 'Vũ Việt Hồng tức Vũ Đức Năng, Phùng Thị Thanh Hà, Vũ Quang, Vũ Hồng Hạnh.',
     note: 'Trích từ bản scan trang 30 sổ phả chép tay gia tộc.',
     image: '/assets/sources/trang-30.png',
   },

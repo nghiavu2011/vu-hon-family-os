@@ -137,7 +137,7 @@ export default function DeathAnniversaryReminderModal({ events = [], onClose }) 
                     <select value={branch} onChange={(e) => setBranch(e.target.value)}>
                       <option value="Tất cả các chi (Toàn họ)">Tất cả các chi (Toàn họ)</option>
                       <option value="Chi Vũ Thành">Chi Vũ Thành</option>
-                      <option value="Chi Vũ Điện">Chi Vũ Điện</option>
+                      <option value="Chi Vũ Điền">Chi Vũ Điền</option>
                       <option value="Chi Vũ Ngọc Điền">Chi Vũ Ngọc Điền</option>
                       <option value="Chi Vũ Văn Rũi">Chi Vũ Văn Rũi</option>
                     </select>
