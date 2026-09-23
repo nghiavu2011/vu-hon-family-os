@@ -973,7 +973,11 @@
     "birthYear": 1959,
     "confidence": "high",
     "privacy": "family",
-    "source": "Dữ liệu gia đình bổ sung"
+    "source": "Dữ liệu gia đình bổ sung",
+    "deathDate": "1990-03-13",
+    "lunarDeath": "17-02",
+    "lunarDeathYear": "Canh Ngọ",
+    "note": "Mất ngày 13/03/1990 (tức ngày 17/02 năm Canh Ngọ)."
   },
   {
     "id": "tran-thuy-hanh",
@@ -999,8 +1003,92 @@
     "branch": "Chi Vũ Thành",
     "fatherId": "vu-chinh-tuong",
     "motherId": "tran-thi-bich-hao",
-    "childrenIds": [],
+    "childrenIds": [
+      "vu-tien-dat",
+      "vu-minh-dang",
+      "vu-duc-anh",
+      "vu-minh-an"
+    ],
     "birthDate": "1982-01-04",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung",
+    "spouseIds": [
+      "le-thi-dan"
+    ]
+  },
+  {
+    "id": "le-thi-dan",
+    "name": "Lê Thị Dân",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-tien-duc"
+    ],
+    "childrenIds": [
+      "vu-tien-dat",
+      "vu-minh-dang",
+      "vu-duc-anh",
+      "vu-minh-an"
+    ],
+    "birthDate": "1982-01-01",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-tien-dat",
+    "name": "Vũ Tiến Đạt",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-tien-duc",
+    "motherId": "le-thi-dan",
+    "childrenIds": [],
+    "birthDate": "2006-12-24",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-minh-dang",
+    "name": "Vũ Minh Đăng",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-tien-duc",
+    "motherId": "le-thi-dan",
+    "childrenIds": [],
+    "birthDate": "2011-03-18",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-duc-anh",
+    "name": "Vũ Đức Anh",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-tien-duc",
+    "motherId": "le-thi-dan",
+    "childrenIds": [],
+    "birthDate": "2018-10-28",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-minh-an",
+    "name": "Vũ Minh An",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-tien-duc",
+    "motherId": "le-thi-dan",
+    "childrenIds": [],
+    "birthDate": "2025-12-16",
     "confidence": "high",
     "privacy": "family",
     "source": "Dữ liệu gia đình bổ sung"
