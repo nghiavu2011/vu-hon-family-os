@@ -31,6 +31,14 @@ export default function QuickNavPills({ onOpenSources, onOpenPrivacy, onOpenQr }
           </div>
 
           <div className="quickNavButtons">
+            <button
+              type="button"
+              className="quickNavBtn highlight"
+              style={{ background: '#8b2500', color: '#fff', borderColor: '#ffdc99', fontWeight: 'bold' }}
+              onClick={() => scrollTo('dang-vu-pha-ky')}
+            >
+              📖 Đặng-Vũ Phả Ký
+            </button>
             <button type="button" className="quickNavBtn" onClick={() => scrollTo('heritage-video')}>
               🎬 Phim Di Sản
             </button>

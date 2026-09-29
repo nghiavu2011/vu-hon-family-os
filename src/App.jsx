@@ -7,6 +7,7 @@ import QuickNavPills from './components/QuickNavPills.jsx';
 import LineagePreview from './components/LineagePreview.jsx';
 import ModuleCards from './components/ModuleCards.jsx';
 import HeritageVideoSection from './components/HeritageVideoSection.jsx';
+import DangVuPhaKyBook from './components/DangVuPhaKyBook.jsx';
 import FamilyTree from './components/FamilyTree.jsx';
 import KinshipCalculator from './components/KinshipCalculator.jsx';
 import PersonDrawer from './components/PersonDrawer.jsx';
@@ -173,6 +174,9 @@ function FamilyOsApp() {
 
       {/* Thước Phim Di Sản: Nguồn Gốc Dòng Họ Vũ - Võ Tại Việt Nam */}
       <HeritageVideoSection />
+
+      {/* Cổ Thư Văn Hiến: Đặng-Vũ Phả Ký (鄧武譜記) - Sách Lật 3D 22 Trang */}
+      <DangVuPhaKyBook />
 
       {/* Cây Phả Hệ Tộc Họ Trực Quan */}
       <FamilyTree people={people} onSelect={handleSelectPerson} />

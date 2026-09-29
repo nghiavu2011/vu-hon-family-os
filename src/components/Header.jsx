@@ -64,17 +64,15 @@ export default function Header({
             {/* Nhã Nhạc Di Sản & Chuông Khánh */}
             <AudioAmbienceWidget />
 
-            {/* Nút Cụ Đồ Ảo AI */}
-            {onOpenAi && (
-              <button
-                type="button"
-                className="btn utilityBtn headerAiBtn"
-                onClick={onOpenAi}
-                title="Hỏi đáp cội nguồn và phả hệ với Cụ Đồ Ảo (Trợ lý Gia tộc AI)"
-              >
-                🧙 Cụ Đồ Ảo (AI)
-              </button>
-            )}
+            {/* Nút Đặng-Vũ Phả Ký */}
+            <a
+              href="#dang-vu-pha-ky"
+              className="btn utilityBtn headerDangVuBtn"
+              style={{ background: '#8b2500', color: '#fff', borderColor: '#ffdc99', fontWeight: 600 }}
+              title="Khám phá Cổ thư Đặng-Vũ Phả Ký (22 trang lật sách tranh màu nước)"
+            >
+              📖 Đặng-Vũ Phả Ký
+            </a>
 
             <button
               type="button"
@@ -163,6 +161,9 @@ export default function Header({
                 <div className="groupLinks">
                   <a href="#home" onClick={(e) => handleLinkClick(e, '#home')}>
                     <span className="linkIcon">🏡</span> Trang chủ Từ đường
+                  </a>
+                  <a href="#dang-vu-pha-ky" onClick={(e) => handleLinkClick(e, '#dang-vu-pha-ky')}>
+                    <span className="linkIcon">📜</span> ĐẶNG-VŨ PHẢ KÝ (鄧武譜記)
                   </a>
                   <a href="#tree" onClick={(e) => handleLinkClick(e, '#tree')}>
                     <span className="linkIcon">🌳</span> Cây Gia phả Tương tác
