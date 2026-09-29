@@ -4824,191 +4824,425 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
   border-color: #8b2500 !important;
 }
 
-/* Khung Phối Cảnh Sách 3D */
-.bookPerspectiveWrapper {
+/* Khung Phối Cảnh Sách Turn.js HTML5 Engine */
+.turnjsBookPerspectiveWrapper {
   position: relative;
-  perspective: 2000px;
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1200px;
 }
 
-.bookSpread {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 560px;
-  background: #fdfaf2;
-  border-radius: 12px;
+.turnjsBookStage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 580px;
+  background: radial-gradient(ellipse at center, rgba(88, 35, 12, 0.08) 0%, rgba(38, 14, 4, 0.22) 100%), #ede2ce;
+  border: 10px solid #3d1b09;
+  border-radius: 16px;
   box-shadow: 
-    0 12px 36px rgba(45, 20, 5, 0.22),
-    0 2px 8px rgba(0, 0, 0, 0.1),
-    inset 0 0 100px rgba(210, 175, 120, 0.25);
-  border: 8px solid #4a2810;
-  position: relative;
+    0 16px 40px rgba(35, 15, 5, 0.35),
+    inset 0 0 100px rgba(80, 40, 10, 0.25);
+  padding: 30px 20px;
   overflow: hidden;
-  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.bookSpread.flipping-next {
-  animation: flipNext 0.35s ease-in-out;
+.turnjsFlipMount {
+  width: 100%;
+  max-width: 1060px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bookSpread.flipping-prev {
-  animation: flipPrev 0.35s ease-in-out;
+.turnjsBookHost {
+  margin: 0 auto;
 }
 
-@keyframes flipNext {
-  0% { transform: rotateY(0deg) scale(1); filter: brightness(1); }
-  50% { transform: rotateY(-6deg) scale(0.985); filter: brightness(0.92); }
-  100% { transform: rotateY(0deg) scale(1); filter: brightness(1); }
+/* Các trang sách chuẩn Turn.js */
+.turnjsPage {
+  background-color: #faf5e8;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(240, 226, 202, 0.5) 100%);
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  box-shadow: inset 0 0 25px rgba(120, 80, 40, 0.08);
 }
 
-@keyframes flipPrev {
-  0% { transform: rotateY(0deg) scale(1); filter: brightness(1); }
-  50% { transform: rotateY(6deg) scale(0.985); filter: brightness(0.92); }
-  100% { transform: rotateY(0deg) scale(1); filter: brightness(1); }
-}
-
-.bookPage {
+.turnjsInner {
   position: relative;
-  padding: 36px 40px;
-  background: #fffdf7;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  padding: 24px 28px;
+  box-sizing: border-box;
 }
 
-.bookPageLeft {
-  border-right: 1px solid #e2cbab;
-  background: radial-gradient(circle at right center, #f4ecd8 0%, #fffdf8 70%);
-}
-
-.bookPageRight {
-  border-left: 1px solid #e2cbab;
-  background: radial-gradient(circle at left center, #f4ecd8 0%, #fffdf8 70%);
-}
-
-/* Đổ bóng rãnh gáy sách cổ ở giữa */
-.bookGutterLeft {
+/* Rãnh gáy sách cổ giữa 2 trang */
+.turnjsSpineGutter {
   position: absolute;
   top: 0;
+  bottom: 0;
+  width: 28px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.spineGutterRight {
   right: 0;
-  bottom: 0;
-  width: 24px;
-  background: linear-gradient(to right, transparent, rgba(60, 30, 10, 0.14));
-  pointer-events: none;
+  background: linear-gradient(to right, transparent, rgba(60, 25, 5, 0.16));
 }
 
-.bookGutterRight {
-  position: absolute;
-  top: 0;
+.spineGutterLeft {
   left: 0;
-  bottom: 0;
-  width: 24px;
-  background: linear-gradient(to left, transparent, rgba(60, 30, 10, 0.14));
-  pointer-events: none;
+  background: linear-gradient(to left, transparent, rgba(60, 25, 5, 0.16));
 }
 
-/* Khung Tranh Màu Nước Trang Trái */
-.illustrationFrame {
+/* Bìa Cứng Sách Cổ (Front & Back Cover) */
+.turnjsCover {
+  background: linear-gradient(135deg, #44130d 0%, #290804 100%) !important;
+  color: #f7e6c4;
+}
+
+.turnjsCoverBorder {
+  height: 100%;
+  border: 3px double #d4af37;
+  border-radius: 6px;
+  padding: 26px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.turnjsCoverCrest {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.turnjsCoverHan {
+  font-family: serif;
+  font-size: 1.15rem;
+  color: #ffde7a;
+  letter-spacing: 2px;
+}
+
+.coverSeriesTag {
+  display: inline-block;
+  font-size: 0.76rem;
+  letter-spacing: 1.5px;
+  color: #d4af37;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  padding-bottom: 4px;
+}
+
+.turnjsCoverTitle {
+  font-size: 2.1rem;
+  color: #ffea9f;
+  margin: 10px 0 4px 0;
+  font-family: serif;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+}
+
+.turnjsCoverSubTitle {
+  font-size: 1.25rem;
+  color: #dfb76c;
+  letter-spacing: 6px;
+  margin: 0 0 12px 0;
+}
+
+.turnjsCoverDesc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #e2cbab;
+  max-width: 320px;
+  font-style: italic;
+  margin: 0;
+}
+
+.turnjsCoverAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 10px 0;
+}
+
+.authorRole {
+  font-size: 0.75rem;
+  color: #c9a36f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.authorName {
+  font-size: 1.05rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.authorOrg {
+  font-size: 0.75rem;
+  color: #bfa382;
+}
+
+.turnjsCoverSeal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sealSquare {
+  width: 44px;
+  height: 44px;
+  background: #a92008;
+  border: 2px solid #ffde7a;
+  color: #ffea9f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: serif;
+  font-size: 0.75rem;
+  line-height: 1.1;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.sealText {
+  font-size: 0.7rem;
+  color: #c9a36f;
+  letter-spacing: 1px;
+}
+
+.turnjsCoverHint {
+  font-size: 0.78rem;
+  color: #ffde7a;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px dashed rgba(212, 175, 55, 0.5);
+  animation: pulseHint 2s infinite ease-in-out;
+}
+
+@keyframes pulseHint {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+/* Bìa Sau (Back Cover) */
+.turnjsCoverBack .turnjsCoverBorder {
+  justify-content: center;
+  gap: 20px;
+}
+
+.turnjsBackSealWrap {
+  margin: 10px 0;
+}
+
+.sealSquareBig {
+  width: 72px;
+  height: 72px;
+  background: #a92008;
+  border: 3px solid #ffde7a;
+  color: #ffea9f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: serif;
+  font-size: 1.15rem;
+  line-height: 1.15;
+  font-weight: bold;
+  border-radius: 6px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.turnjsBackTitle {
+  font-size: 1.5rem;
+  color: #ffea9f;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.turnjsBackMotto {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #e2cbab;
+  max-width: 320px;
+  font-style: italic;
+  margin: 0;
+}
+
+.turnjsBackFooter {
+  font-size: 0.8rem;
+  color: #d4af37;
+  letter-spacing: 2px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding-top: 10px;
+}
+
+/* Trang Trái: Tranh Minh Họa */
+.turnjsTopBadge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #d1b48c;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.topBadgeText {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #8b552b;
+  letter-spacing: 1px;
+}
+
+.topBadgeSeal {
+  font-family: serif;
+  color: #8b2500;
+  border: 1px solid #8b2500;
+  font-size: 0.72rem;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.turnjsArtFrame {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #faf4e6;
+  background: #f7efe1;
   border: 1px solid #d4b58c;
   border-radius: 8px;
-  padding: 14px;
-  box-shadow: inset 0 0 20px rgba(180, 140, 80, 0.15);
+  padding: 10px;
+  box-shadow: inset 0 0 16px rgba(180, 140, 80, 0.12);
+  min-height: 0;
 }
 
-.watercolorImg {
+.turnjsImg {
   width: 100%;
-  max-height: 410px;
+  max-height: 380px;
   object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
 }
 
-.watercolorImg:hover {
-  transform: scale(1.015);
-}
-
-.illustrationCaption {
-  margin-top: 12px;
+.turnjsArtCaption {
+  margin-top: 10px;
   text-align: center;
 }
 
-.captionTitle {
+.artCaptionTitle {
   display: block;
   font-weight: 700;
   color: #68260c;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
 }
 
-.captionPage {
+.artCaptionSub {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: #8c6846;
   font-style: italic;
 }
 
-.pageWatermarkSeal {
-  position: absolute;
-  top: 14px;
-  left: 18px;
+.turnjsPageNumber {
+  text-align: center;
   font-family: serif;
-  font-size: 1.1rem;
-  color: rgba(180, 40, 20, 0.22);
-  border: 1px solid rgba(180, 40, 20, 0.22);
-  padding: 2px 6px;
-  border-radius: 4px;
-  pointer-events: none;
+  font-size: 0.85rem;
+  color: #8b552b;
+  font-weight: bold;
+  margin-top: 8px;
 }
 
-/* Văn Bản Trang Phải */
-.bookPageHeader {
+/* Trang Phải: Chính Văn Sử Liệu */
+.turnjsPageHead {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px dashed #d1b48c;
-  padding-bottom: 8px;
-  margin-bottom: 16px;
-  font-size: 0.85rem;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 0.82rem;
   color: #8b552b;
 }
 
-.bookHeaderCat {
-  font-weight: 700;
+.headChapter {
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
-.storyTitle {
-  font-size: 1.45rem;
+.headSub {
+  font-style: italic;
+  color: #7a5839;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.turnjsPageContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.turnjsStoryHeading {
+  font-size: 1.35rem;
   color: #8b2500;
   font-family: serif;
-  margin-bottom: 12px;
-  line-height: 1.35;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
 }
 
-.storyNarrative {
-  font-size: 0.98rem;
-  line-height: 1.7;
+.turnjsStoryText {
+  font-size: 0.92rem;
+  line-height: 1.65;
   color: #2b1f14;
   text-align: justify;
-  margin-bottom: 16px;
+  margin: 0 0 12px 0;
 }
 
-.historicalFactBox {
-  background: rgba(247, 237, 217, 0.7);
+.turnjsStoryText:first-of-type::first-letter {
+  font-size: 2.2rem;
+  font-family: serif;
+  color: #8b2500;
+  float: left;
+  line-height: 1;
+  padding-right: 6px;
+  padding-top: 2px;
+  font-weight: bold;
+}
+
+.turnjsFactBox {
+  background: rgba(247, 237, 217, 0.75);
   border-left: 3px solid #8b2500;
-  border-radius: 0 8px 8px 0;
-  padding: 10px 14px;
-  margin-bottom: 14px;
-  font-size: 0.88rem;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
   color: #4a3319;
 }
 
-.factHeader {
+.factHead {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -5016,81 +5250,113 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
   color: #8b2500;
 }
 
-.factContent {
+.factText {
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.5;
   font-style: italic;
 }
 
-.poeticQuote {
-  margin: 12px 0;
-  padding: 8px 14px;
+.turnjsQuote {
+  margin: 8px 0;
+  padding: 6px 12px;
   border-left: 3px solid #c98a2c;
-  background: rgba(255, 250, 240, 0.8);
+  background: rgba(255, 250, 240, 0.85);
   font-family: serif;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #5c2c00;
   font-style: italic;
   white-space: pre-line;
 }
 
-.pageFootnotes {
+.turnjsNotes {
   margin-top: auto;
-  padding-top: 10px;
+  padding-top: 8px;
   border-top: 1px solid #ebd9c0;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #77614d;
 }
 
-.bookPageFooter {
+/* Trang Kết (Ending / Colophon) */
+.endingContent {
   text-align: center;
-  margin-top: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
-.pageNumberDisplay {
+.colophonMeta {
+  text-align: left;
+  background: rgba(247, 237, 217, 0.6);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px dashed #d4b58c;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #4a3319;
+  margin: 10px 0;
+}
+
+.colophonMeta p {
+  margin: 4px 0;
+}
+
+.sealSquareLarge {
+  width: 52px;
+  height: 52px;
+  background: #a92008;
+  border: 2px solid #ffde7a;
+  color: #ffea9f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: serif;
-  color: #8b552b;
+  font-size: 0.95rem;
+  line-height: 1.15;
   font-weight: bold;
+  border-radius: 6px;
+  margin: 12px auto 0 auto;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Nút Lật Trang Nổi Hai Bên */
-.flipNavBtn {
+/* Nút Lật Nổi Hai Bên Sách Turn.js */
+.turnjsFloatingNav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #8b2500;
   color: #fff;
   border: 2px solid #ffdc99;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   transition: all 0.25s ease;
-  z-index: 10;
+  z-index: 25;
 }
 
-.flipNavBtn:hover:not(:disabled) {
+.turnjsFloatingNav:hover {
   background: #a93206;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 8px 22px rgba(139, 37, 0, 0.4);
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 10px 28px rgba(139, 37, 0, 0.5);
 }
 
-.flipNavBtn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
+.turnjsBookStage .prevBtn {
+  left: 8px;
 }
 
-.prevBtn {
-  left: -24px;
+.turnjsBookStage .nextBtn {
+  right: 8px;
 }
 
-.nextBtn {
-  right: -24px;
+.turnjsUsageHint {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: #684828;
 }
 
 /* Dải Thumbnail Mục Lục 22 Trang */
@@ -5240,36 +5506,21 @@ body.seniorMode input, body.seniorMode select, body.seniorMode textarea{font-siz
 
 /* Đáp ứng Mobile & Tablet */
 @media (max-width: 900px) {
-  .bookSpread {
-    grid-template-columns: 1fr;
-    min-height: auto;
+  .turnjsBookStage {
+    padding: 16px 8px;
+    min-height: 480px;
   }
-  
-  .bookPageLeft {
-    border-right: none;
-    border-bottom: 1px dashed #d1b48c;
-    padding: 20px;
+
+  .turnjsFloatingNav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.15rem;
   }
-  
-  .bookPageRight {
-    border-left: none;
-    padding: 20px;
-  }
-  
-  .bookGutterLeft, .bookGutterRight {
-    display: none;
-  }
-  
+
+  .turnjsBookStage .prevBtn { left: 4px; }
+  .turnjsBookStage .nextBtn { right: 4px; }
+
   .fulltextContentGrid {
     grid-template-columns: 1fr;
   }
-  
-  .flipNavBtn {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
-  }
-  
-  .prevBtn { left: -10px; }
-  .nextBtn { right: -10px; }
 }
