@@ -1116,10 +1116,12 @@
     "fatherId": "vu-thanh",
     "motherId": "dang-thi-thai",
     "spouseIds": [
-      "tong-thanh-hien"
+      "tong-thanh-hien",
+      "tran-thi-le-van"
     ],
     "childrenIds": [
-      "vu-thi-thu-trang"
+      "vu-thi-thu-trang",
+      "vu-thi-cam-nhung"
     ],
     "birthDate": "1959-11-08",
     "confidence": "high",
@@ -1145,14 +1147,88 @@
   },
   {
     "id": "vu-thi-thu-trang",
-    "name": "Vũ Thị Thu Trang",
+    "name": "Vũ Thu Trang",
     "gender": "female",
     "gen": 6,
     "branch": "Chi Vũ Thành",
     "fatherId": "vu-duc-tung",
     "motherId": "tong-thanh-hien",
-    "childrenIds": [],
+    "childrenIds": [
+      "kieu-tuong-vi"
+    ],
     "birthDate": "1988-08-02",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung",
+    "aka": [
+      "Vũ Thị Thu Trang"
+    ],
+    "spouseIds": [
+      "kieu-linh"
+    ]
+  },
+  {
+    "id": "tran-thi-le-van",
+    "name": "Trần Thị Lê Vân",
+    "gender": "female",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-duc-tung"
+    ],
+    "childrenIds": [
+      "vu-thi-cam-nhung"
+    ],
+    "birthDate": "1967-09-05",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "vu-thi-cam-nhung",
+    "name": "Vũ Thị Cẩm Nhung",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "vu-duc-tung",
+    "motherId": "tran-thi-le-van",
+    "childrenIds": [],
+    "birthDate": "1997-03-22",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "kieu-linh",
+    "name": "Kiều Linh",
+    "gender": "male",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-thi-thu-trang"
+    ],
+    "childrenIds": [
+      "kieu-tuong-vi"
+    ],
+    "birthDate": "1988-03-25",
+    "note": "Chồng (cũ) của Vũ Thu Trang.",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "kieu-tuong-vi",
+    "name": "Kiều Tường Vì",
+    "aka": [
+      "Kiều Tường Vi"
+    ],
+    "gender": "female",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "kieu-linh",
+    "motherId": "vu-thi-thu-trang",
+    "childrenIds": [],
+    "birthDate": "2013-12-20",
     "confidence": "high",
     "privacy": "family",
     "source": "Dữ liệu gia đình bổ sung"
