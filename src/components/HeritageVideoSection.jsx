@@ -22,7 +22,7 @@ export default function HeritageVideoSection() {
             className="heritageVideoPlayer"
           >
             <source src="/assets/video/nguon-goc-dong-ho-vu-vo.mp4" type="video/mp4" />
-            Trình duyệt của bạn không hỗ trợ phát video HTML5.
+            Trình duyệt hiện tại chưa hỗ trợ phát trực tiếp video này.
           </video>
         </div>
 

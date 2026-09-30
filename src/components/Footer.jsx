@@ -1,4 +1,4 @@
-export default function Footer({ onOpenSources, onOpenPrivacy, onOpenQr }) {
+export default function Footer({ onOpenSources, onOpenPrivacy, onOpenAdmin }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -54,14 +54,6 @@ export default function Footer({ onOpenSources, onOpenPrivacy, onOpenQr }) {
                   🔒 Chính sách riêng tư nội tộc
                 </button>
               </li>
-              {onOpenQr && (
-                <li>
-                  <button type="button" className="footerTextActionBtn footerQrActionBtn" onClick={onOpenQr}>
-                    📱 Mã QR Truy Cập & Cài App
-                  </button>
-                </li>
-              )}
-              <li><a href="#analytics">📊 Thống kê Truy cập Realtime</a></li>
             </ul>
           </div>
 
@@ -106,16 +98,27 @@ export default function Footer({ onOpenSources, onOpenPrivacy, onOpenQr }) {
         {/* Thanh Bản quyền & Cam kết Bảo mật */}
         <div className="footerBottomBar">
           <div className="footerCopyright">
-            <span>© {currentYear} <b>Vũ Hồn Family OS (v24.1)</b> · Bản quyền di sản số thuộc Hội đồng Dòng họ Vũ - Võ Việt Nam.</span>
+            <span>© {currentYear} <b>Vũ Hồn Family OS</b> · Bản quyền di sản số thuộc Hội đồng Dòng họ Vũ - Võ Việt Nam.</span>
           </div>
           <div className="footerBadges">
             <button type="button" className="footerBadgeBtn" onClick={onOpenPrivacy}>
-              🔒 Bảo vệ Quyền riêng tư RLS
+              🔒 Bảo vệ Quyền riêng tư Nội tộc
             </button>
             <button type="button" className="footerBadgeBtn" onClick={onOpenSources}>
               📜 Liêm chính Sử liệu Mộ Trạch
             </button>
-            <span className="footerBadge">⚡ PWA Offline Ready</span>
+            <span className="footerBadge">🏮 Tra cứu thuận tiện mọi lúc mọi nơi</span>
+            {onOpenAdmin && (
+              <button
+                type="button"
+                className="footerBadgeBtn adminSecretBtn"
+                onClick={onOpenAdmin}
+                title="Bàn làm việc dành cho Tác giả"
+                style={{ opacity: 0.35, fontSize: '0.85rem', cursor: 'pointer', padding: '2px 6px' }}
+              >
+                🗝️
+              </button>
+            )}
           </div>
         </div>
       </div>

@@ -60,9 +60,6 @@ export default function QuickNavPills({ onOpenSources, onOpenPrivacy, onOpenQr }
             <button type="button" className="quickNavBtn" onClick={() => scrollTo('career')}>
               🎓 Khuyến Học
             </button>
-            <button type="button" className="quickNavBtn" onClick={() => scrollTo('analytics')}>
-              📊 Thống Kê
-            </button>
 
             <span className="quickNavDivider">|</span>
 
@@ -72,16 +69,6 @@ export default function QuickNavPills({ onOpenSources, onOpenPrivacy, onOpenQr }
             <button type="button" className="quickNavBtn modalBtn" onClick={onOpenPrivacy} title="Xem Chính sách riêng tư nội tộc">
               🔒 Quyền Riêng Tư
             </button>
-            {onOpenQr && (
-              <button
-                type="button"
-                className="quickNavBtn modalBtn qrPillBtn"
-                onClick={onOpenQr}
-                title="Mã QR quét vào web & cài ứng dụng trên điện thoại"
-              >
-                📱 Quét QR Cài App
-              </button>
-            )}
           </div>
         </div>
       </nav>

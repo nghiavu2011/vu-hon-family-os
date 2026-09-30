@@ -160,8 +160,7 @@ function createBookPagesDOM(pages) {
           <p><strong>Tác phẩm:</strong> ĐẶNG-VŨ PHẢ KÝ (鄧武譜記)</p>
           <p><strong>Nguyên tác:</strong> GS. Đặng Phương-Nghi (1930 - 2024)</p>
           <p><strong>Cơ quan lưu trữ:</strong> Trung tâm Quốc tế Nghiên cứu Việt Nam (C.I.E.V Paris)</p>
-          <p><strong>Số hóa & Mỹ thuật AI:</strong> Hội đồng Dòng họ Vũ Hồn & Ban Kỹ thuật Vũ Hồn Family OS</p>
-          <p><strong>Nền tảng công nghệ:</strong> HTML5 3D PageFlip Engine & Pure Audio Synth</p>
+          <p><strong>Bản quyền số hóa:</strong> Hội đồng Dòng họ Vũ Hồn Việt Nam lưu truyền bách thế</p>
         </div>
         <div class="sealSquareLarge">
           <span>萬代<br/>長存</span>
@@ -406,14 +405,14 @@ export default function DangVuPhaKyBook() {
       {/* Tiêu đề phân đoạn mang đậm bản sắc văn hiến */}
       <div className="sectionHeader" style={{ textAlign: 'center', marginBottom: '20px' }}>
         <div className="sectionBadge">
-          <span>📜 CỔ THƯ VĂN HIẾN · HIỆU ỨNG LẬT TRANG TURN.JS</span>
+          <span>📜 CỔ THƯ VĂN HIẾN · 22 HỒI KHẢO LUẬN</span>
         </div>
         <h2 className="sectionTitle" style={{ fontSize: '2.1rem', color: '#8b2500', margin: '8px 0' }}>
           ĐẶNG-VŨ PHẢ KÝ (鄧武譜記)
         </h2>
         <p className="sectionSubTitle" style={{ color: '#555', maxWidth: '820px', margin: '0 auto' }}>
           Tác phẩm phả học kinh điển của <strong>GS. Đặng Phương-Nghi</strong> (Centre International d'Études Vietnamiennes, Paris) — 
-          Mô phỏng trải nghiệm đọc sách cổ với hiệu ứng cuộn trang giấy thật <strong>Turn.js HTML5</strong> và âm thanh lật trang chân thực.
+          Khảo cứu cội nguồn phát tích từ Mộ Trạch (Hải Dương) đến đất học Hành Thiện (Nam Định).
         </p>
       </div>
 
@@ -458,19 +457,19 @@ export default function DangVuPhaKyBook() {
             type="button"
             className={`btn utilityBtn ${soundEnabled ? 'activeSound' : ''}`}
             onClick={() => setSoundEnabled(!soundEnabled)}
-            title={soundEnabled ? 'Đang bật âm thanh lật trang (page-flip.mp3)' : 'Đã tắt âm thanh'}
+            title={soundEnabled ? 'Đang bật âm thanh lật trang' : 'Đã tắt âm thanh'}
           >
             {soundEnabled ? '🔊 Âm thanh: BẬT' : '🔇 Âm thanh: TẮT'}
           </button>
 
-          {/* Chế độ xem: Sách lật Turn.js hoặc Văn bản nghiên cứu */}
+          {/* Chế độ xem: Sách lật hoặc Bản văn chi tiết */}
           <button
             type="button"
             className="btn utilityBtn"
             onClick={() => setViewMode(viewMode === 'book' ? 'fulltext' : 'book')}
             title="Chuyển đổi chế độ đọc"
           >
-            {viewMode === 'book' ? '📑 Bản Văn Nghiên Cứu' : '📖 Sách Lật 3D'}
+            {viewMode === 'book' ? '📑 Đọc Văn Bản Chi Tiết' : '📖 Chế Độ Sách Lật'}
           </button>
 
           {/* Nút Toàn màn hình */}
@@ -485,11 +484,11 @@ export default function DangVuPhaKyBook() {
         </div>
       </div>
 
-      {/* GIAO DIỆN SÁCH LẬT TURN.JS HTML5 ENGINE */}
+      {/* GIAO DIỆN SÁCH LẬT CỔ */}
       {viewMode === 'book' ? (
         <div className="turnjsBookPerspectiveWrapper">
           <div className="turnjsBookStage">
-            {/* Vùng gắn Turn.js / StPageFlip Engine */}
+            {/* Vùng gắn sách lật */}
             <div className="turnjsFlipMount" ref={flipMountRef} />
 
             {/* Nút lật sang trái nổi hai bên */}
@@ -516,7 +515,7 @@ export default function DangVuPhaKyBook() {
           </div>
 
           <div className="turnjsUsageHint">
-            <span>💡 <em>Mẹo đọc:</em> Bạn có thể <strong>nhấp chuột vào góc trang</strong> hoặc <strong>kéo mép giấy</strong> để lật sách như thật, dùng phím mũi tên <strong>← / →</strong>, hoặc nhấp vào mục lục 22 trang bên dưới.</span>
+            <span>💡 <em>Mẹo đọc:</em> Quý vị có thể lật trang bằng cách <strong>nhấp hoặc kéo mép sách</strong>, dùng phím mũi tên <strong>← / →</strong> trên bàn phím, hoặc chọn từng Hồi ở mục lục 22 trang bên dưới.</span>
           </div>
         </div>
       ) : (

@@ -102,18 +102,6 @@ export default function Header({
               💬 Zalo: <b>0985.578.385</b>
             </a>
 
-            {/* Nút Mã QR Web */}
-            {onOpenQr && (
-              <button
-                type="button"
-                className="btn utilityBtn headerQrBtn"
-                onClick={onOpenQr}
-                title="Mã QR quét bằng Zalo, Camera điện thoại để vào trang web và lưu vào màn hình chính"
-              >
-                📱 Mã QR Web
-              </button>
-            )}
-
             {/* Main Menu Button -> Mở Menu Trượt Bên Hông */}
             <button
               type="button"
@@ -219,18 +207,6 @@ export default function Header({
                   >
                     <span className="linkIcon">🔒</span> Chính Sách Riêng Tư
                   </button>
-                  {onOpenQr && (
-                    <button
-                      type="button"
-                      className="sidebarNavBtn qrSidebarNavBtn"
-                      onClick={() => {
-                        setSidebarOpen(false);
-                        onOpenQr();
-                      }}
-                    >
-                      <span className="linkIcon">📱</span> Mã QR Quét & Cài Ứng Dụng
-                    </button>
-                  )}
                   {role !== 'public' && (
                     <>
                       <a href="#internal-network" onClick={(e) => handleLinkClick(e, '#internal-network')}>
@@ -241,9 +217,6 @@ export default function Header({
                       </a>
                     </>
                   )}
-                  <a href="#analytics" onClick={(e) => handleLinkClick(e, '#analytics')}>
-                    <span className="linkIcon">📊</span> Thống kê Truy cập Realtime
-                  </a>
                 </div>
               </div>
 

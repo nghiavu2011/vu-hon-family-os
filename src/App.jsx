@@ -18,7 +18,7 @@ import GovernanceCenter from './components/GovernanceCenter.jsx';
 import CareerSection from './components/CareerSection.jsx';
 import InternalNetwork from './components/InternalNetwork.jsx';
 import CareerMentor from './components/CareerMentor.jsx';
-import VisitorAnalyticsDashboard from './components/VisitorAnalyticsDashboard.jsx';
+import CreatorDashboardModal from './components/CreatorDashboardModal.jsx';
 import FloatingContact from './components/FloatingContact.jsx';
 import BetaDashboard from './components/BetaDashboard.jsx';
 import ProductionLaunch from './components/ProductionLaunch.jsx';
@@ -60,6 +60,19 @@ function FamilyOsApp() {
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showQrModal, setShowQrModal] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showCreatorDashboard, setShowCreatorDashboard] = useState(false);
+
+  useEffect(() => {
+    const checkAdminHash = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#admin' || hash === '#quantri' || hash === '#dashboard' || hash === '#creator') {
+        setShowCreatorDashboard(true);
+      }
+    };
+    checkAdminHash();
+    window.addEventListener('hashchange', checkAdminHash);
+    return () => window.removeEventListener('hashchange', checkAdminHash);
+  }, []);
 
   useEffect(() => {
     if (seniorMode) {
@@ -212,14 +225,11 @@ function FamilyOsApp() {
       {showAdmin ? <BetaDashboard people={rawPeople} visiblePeople={people} events={events} graves={graves} /> : null}
       {showAdmin ? <ProductionLaunch people={rawPeople} visiblePeople={people} events={events} places={rawPlaces} graves={graves} /> : null}
 
-      {/* Thống Kê Truy Cập & Nhịp Sống Dòng Họ (Realtime) */}
-      <VisitorAnalyticsDashboard />
-
       {/* Chân trang Di sản */}
       <Footer
         onOpenSources={() => setShowSourceNotesModal(true)}
         onOpenPrivacy={() => setShowPrivacyModal(true)}
-        onOpenQr={() => setShowQrModal(true)}
+        onOpenAdmin={() => setShowCreatorDashboard(true)}
       />
 
       {/* Nút Zalo / Hotline & Cụ Đồ Ảo AI nổi cạnh màn hình */}
@@ -277,6 +287,20 @@ function FamilyOsApp() {
       {showQrModal && (
         <WebsiteQrModal
           onClose={() => setShowQrModal(false)}
+        />
+      )}
+
+      {/* Bàn Quản Trị Bảo Mật Dành Riêng Cho Tác Giả / Người Tạo */}
+      {showCreatorDashboard && (
+        <CreatorDashboardModal
+          isOpen={showCreatorDashboard}
+          onClose={() => {
+            setShowCreatorDashboard(false);
+            const currentHash = window.location.hash.toLowerCase();
+            if (currentHash === '#admin' || currentHash === '#quantri' || currentHash === '#dashboard' || currentHash === '#creator') {
+              history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+          }}
         />
       )}
 
