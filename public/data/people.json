@@ -678,7 +678,30 @@
     "confidence": "high",
     "privacy": "family",
     "source": "Dữ liệu gia đình bổ sung",
-    "note": "Bà Vũ Thị Thanh Hằng, con gái cụ Vũ Thành và cụ bà Đặng Thị Thái. Thân mẫu của anh Ngô Trọng Long."
+    "note": "Mất ngày 25/12/2023 (tức ngày 13/11 năm Quý Mão). Con gái Cụ Vũ Thành và Cụ bà Đặng Thị Thái.",
+    "deathDate": "2023-12-25",
+    "lunarDeath": "13-11",
+    "lunarDeathYear": "Quý Mão",
+    "spouseIds": [
+      "ngo-trong-thanh"
+    ]
+  },
+  {
+    "id": "ngo-trong-thanh",
+    "name": "Ngô Trọng Thành",
+    "gender": "male",
+    "gen": 5,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "vu-thi-hang"
+    ],
+    "childrenIds": [
+      "ngo-trong-long"
+    ],
+    "birthDate": "1946-11-15",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
   },
   {
     "id": "ngo-trong-long",
@@ -687,12 +710,65 @@
     "gen": 6,
     "branch": "Chi Vũ Thành",
     "motherId": "vu-thi-hang",
-    "childrenIds": [],
+    "childrenIds": [
+      "ngo-thanh-huyen",
+      "ngo-trong-ngoc-lam"
+    ],
     "birthDate": "1976-04-25",
     "confidence": "high",
     "privacy": "family",
     "source": "Dữ liệu gia đình bổ sung",
-    "note": "Anh Ngô Trọng Long, con trai bà Vũ Thị Thanh Hằng, cháu ngoại cụ Vũ Thành."
+    "note": "Anh Ngô Trọng Long, con trai ông Ngô Trọng Thành và bà Vũ Thị Thanh Hằng, cháu ngoại Cụ Vũ Thành.",
+    "fatherId": "ngo-trong-thanh",
+    "spouseIds": [
+      "do-thi-hong-tham"
+    ]
+  },
+  {
+    "id": "do-thi-hong-tham",
+    "name": "Đỗ Thị Hồng Thắm",
+    "gender": "female",
+    "gen": 6,
+    "branch": "Chi Vũ Thành",
+    "spouseIds": [
+      "ngo-trong-long"
+    ],
+    "childrenIds": [
+      "ngo-thanh-huyen",
+      "ngo-trong-ngoc-lam"
+    ],
+    "birthDate": "1979-08-19",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "ngo-thanh-huyen",
+    "name": "Ngô Thanh Huyền",
+    "gender": "female",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "ngo-trong-long",
+    "motherId": "do-thi-hong-tham",
+    "childrenIds": [],
+    "birthDate": "2005-11-17",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
+  },
+  {
+    "id": "ngo-trong-ngoc-lam",
+    "name": "Ngô Trọng Ngọc Lâm",
+    "gender": "male",
+    "gen": 7,
+    "branch": "Chi Vũ Thành",
+    "fatherId": "ngo-trong-long",
+    "motherId": "do-thi-hong-tham",
+    "childrenIds": [],
+    "birthDate": "2009-09-06",
+    "confidence": "high",
+    "privacy": "family",
+    "source": "Dữ liệu gia đình bổ sung"
   },
   {
     "id": "vu-chi-thien",
